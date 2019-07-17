@@ -232,7 +232,7 @@ server <- function(input, output) {
     # Create pattern
     keywords <- input$keyword_text %>%
       str_split(",") %>%
-      pluck(1) %>%
+      purrr::pluck(1) %>%
       str_trim() %>%
       discard( ~ .x == "")
     
