@@ -97,7 +97,7 @@ urls <- jsm_html %>%
 
 jsm_talks_raw <- tibble(
   title = titles,
-  url = glue("http://ww2.amstat.org/meetings/jsm/2019/onlineprogram/{urls}")
+  url = urls
 )
 
 jsm_talks <- jsm_talks_raw %>%
