@@ -7,6 +7,10 @@ library(glue)
 jsm2019_html <- read_html("raw-data/jsm2019.htm")
 jsm_html <- jsm2019_html
 
+# read pd data ---------------------------------------------------------
+jsm2019_pd_html <- read_html("raw-data/jsm2019-pd.htm")
+jsm_pd_html <- jsm2019_pd_html
+
 # scrape session schedule -------------------------------------------
 
 dates_times <- jsm_html %>%
@@ -32,7 +36,7 @@ ids <- jsm_html %>%
   str_remove("\\*") %>%
   str_trim()
 
-slugs <- jsm_html %>%
+urls <- jsm_html %>%
   html_nodes("#bottom br+ a") %>%
   html_attr("href")
 
@@ -47,9 +51,27 @@ jsm_sessions_raw <- tibble(
   location = locations,
   id = ids,
   session_type = sessions_types,
-  slug = slugs,
+  url = urls,
   sponsor = sponsors
 )
+
+# get professional development URLs --------------------------------------------
+
+pd_sessions <- jsm_pd_html %>%
+  html_nodes("tr:nth-child(2) b") %>%
+  html_text() %>%
+  str_remove(" — (.*)")
+
+pd_urls <- jsm_pd_html %>%
+  html_nodes("tr+ tr a") %>%
+  html_attr("href")
+
+pd <- tibble(
+  session = pd_sessions,
+  url = pd_urls
+)
+
+# jsm_sessions -----------------------------------------------------------------
 
 jsm_sessions <- jsm_sessions_raw %>%
   # separate columns
@@ -60,13 +82,6 @@ jsm_sessions <- jsm_sessions_raw %>%
   mutate(
     # has fee
     has_fee = str_detect(session, "(ADDED FEE)"),
-    # data error
-    end_time = ifelse(id == "581", "3:50 PM", end_time),
-    # compose URLs
-    url = ifelse(
-      type == "Professional Development Continuing Education Course", slug,
-      glue("http://ww2.amstat.org/meetings/jsm/2018/onlineprogram/{slug}")
-    ),
     # reduce type levels
     type = case_when(
       str_detect(type, "Roundtable")               ~ "Roundtable",
@@ -74,14 +89,24 @@ jsm_sessions <- jsm_sessions_raw %>%
       str_detect(type, "Other")                    ~ "Other",
       TRUE                                         ~ type
     ),
+    # compose URLs
+    url = case_when(
+      type == "Professional Development"           ~ NA_character_,
+      type == "Roundtable"                         ~ "https://ww2.amstat.org/meetings/jsm/2019/onlineprogram/index.cfm",
+      TRUE                                         ~ url
+    ),
     # civilian to military time
     beg_time_round = format(strptime(beg_time, "%I:%M %p"), format = "%H:%M:%S") %>% str_remove("\\:.+") %>% as.numeric(),
     end_time_round = format(strptime(end_time, "%I:%M %p"), format = "%H:%M:%S") %>% str_remove("\\:.+") %>% as.numeric(),
     end_time_round = ifelse(str_detect(end_time, "\\:[1-5]"), end_time_round+1, end_time_round),
-    # for convenience
-    end_time_round = ifelse(id == "216596", 23, end_time_round)
+    # for convenience, fix dance party end time
+    end_time_round = ifelse(id == "218966", 23, end_time_round)
   ) %>%
-  select(-slug)
+  # fix prof dev URLs
+  left_join(pd, by = "session") %>%
+  mutate(url = ifelse(is.na(url.x) , url.y, url.x)) %>%
+  # select columns
+  select(day, date, time, beg_time, end_time, location, id, session, type, url, sponsor, has_fee, beg_time_round, end_time_round)
 
 write_csv(jsm_sessions, path = "app-data/jsm2019_sessions.csv")
 

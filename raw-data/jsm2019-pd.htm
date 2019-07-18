@@ -1,0 +1,3860 @@
+<!DOCTYPE html>
+<!-- saved from url=(0076)https://ww2.amstat.org/meetings/jsm/2019/onlineprogram/MainSearchResults.cfm -->
+<html lang="en" class="gr__ww2_amstat_org"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+
+    <meta name="keywords" content="JSM, Joint Statistical Meetings, Statistics, statisticians, baltimore, statistical applications, methodology, theory, academia, industry, government">
+    <meta name="description" content="2019 Joint Statistical Meetings (JSM) is the largest gathering of statisticians held in North America. Attended by more than 6,000 people, meeting activities include oral presentations, panel sessions, poster presentations, continuing education courses, an exhibit hall (with state-of-the-art statistical products and opportunities), career placement services, society and section business meetings, committee meetings, social activities and networking opportunities.  ">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+<link rel="shortcut icon" href="https://ww2.amstat.org/meetings/jsm/2019/favicon.ico" type="image/x-icon">
+<link rel="icon" href="https://ww2.amstat.org/meetings/jsm/2019/favicon.png" type="image/png">
+<link rel="stylesheet" href="./jsm2019-pd_files/flexboxgrid.min.css" type="text/css">
+<link type="text/css" rel="stylesheet" href="./jsm2019-pd_files/6ebe4ea4-f37a-4d1f-a320-d2bf28e280fa.css">
+<link rel="stylesheet" href="./jsm2019-pd_files/font-awesome.min.css">
+
+<script src="./jsm2019-pd_files/cb=gapi(1).loaded_0" async=""></script><script async="" src="./jsm2019-pd_files/sp.js"></script><script async="" src="./jsm2019-pd_files/analytics.js"></script><script type="text/javascript" src="./jsm2019-pd_files/jquery.min.js"></script>
+<link rel="stylesheet" type="text/css" media="all" href="./jsm2019-pd_files/style.css" title="default">
+
+    <link rel="stylesheet" type="text/css" href="./jsm2019-pd_files/JSM2019applications.css">
+
+<link rel="stylesheet" type="text/css" media="print" href="./jsm2019-pd_files/print.css">
+
+
+
+<script type="text/javascript">
+
+    $(document).ready(function() {
+    if ($('#top').length) {
+        var scrollTrigger = 100,// px
+            backToTop = function () {
+                var scrollTop = $(window).scrollTop();
+                if (scrollTop > scrollTrigger) {
+                    $('#top').addClass('show');
+                } else {
+                    $('#top').removeClass('show');
+                }
+            };
+        backToTop();
+        $(window).on('scroll', function () {
+            backToTop();
+        });
+        $('#top').on('click', function (e) {
+            e.preventDefault();
+            $('html,body').animate({
+                scrollTop: 0
+            }, 200);
+        });
+    }
+});
+</script>
+
+        <script type="application/ld+json">
+    {
+   "@context":"http://schema.org",
+    "@type":"Event",
+    "name":"2019 Joint Statistical Meetings",
+    "description":"JSM is one of the largest statistical events in the world with more than 6,000 attendees from 52 countries.",
+    "url":"https://ww2.amstat.org/meetings/jsm/2019/",
+    "image":"https://ww2.amstat.org/meetings/jsm/2019/images/logo.png",
+    "startDate":"2019-07-27T07:00:00+00:00",
+    "endDate":"2019-08-01",
+    "location":{
+        "@type":"Place",
+        "name":"Colorado Convention Center",
+        "address":"700 14th St. Denver, Colorado 80202"
+        }
+    }
+</script>
+
+
+        <title>JSM 2019 Online Program</title>
+    
+    <style>
+.URLinfo
+{
+    display:inline;
+}
+</style>
+<link rel="stylesheet" href="./jsm2019-pd_files/jquery-impromptu.min.css" type="text/css">
+
+<script type="text/javascript" src="./jsm2019-pd_files/jaaulde-cookies.js"></script>
+<script type="text/javascript" src="./jsm2019-pd_files/jaaulde-cookies.jquery.js"></script>
+<script type="text/javascript" src="./jsm2019-pd_files/jquery-impromptu6.2.2.min.js"></script>
+<script src="./jsm2019-pd_files/jquery.urlshortener.js" type="text/javascript"></script>
+<script type="text/javascript">
+
+ $(document).ready(function()
+     {
+        $(document).on('click','.AddSession',function()
+            {
+                var formval = { AddSession:$(this) .attr("id")};
+                if (!isValidEmailAddress($.cookies.get('MYPROGRAMEMAIL', {path : '/',domain: 'amstat.org'})))
+                    {
+                          GetEmail(this);
+                    }
+                    else
+                    {
+                    $.ajax(
+                        {
+                        type: "POST",
+                        url: "AddSession.cfm",
+                        dataType: "text",
+                        data: formval,
+                        context: this,
+                        success: function(msg)
+                            {
+                                $.prompt(msg,{show:'slideDown', prefix:'jqueryprompt', timeout: 850});$(this).removeClass("AddSession").addClass("RemoveSession");
+                            }
+                        });
+                        AddSession:$(this).val('Remove from My Program');
+                        AddSession:$(this).removeClass("AddSession").addClass("RemoveSession");
+                    }
+            });
+        $(document).on('click','.RemoveSession',function()
+            {
+                var formval = { RemoveSession:$(this) .attr("id")};
+                if ($.cookies.get('MYPROGRAMEMAIL', {path : '/',domain: 'amstat.org'}) != 'undefined' )
+                    {
+                    $.ajax(
+                        {
+                        type: "POST",
+                        url: "RemoveSession.cfm",
+                        dataType: "text",
+                        data: formval,
+                        context: this,
+                        success: function(msg)
+                            {
+                                $.prompt(msg,{show:'slideDown', prefix:'jqueryprompt', timeout: 850});
+                            }
+                        });
+                        AddSession:$(this).val('Add To My Program');
+                        AddSession:$(this).removeClass("RemoveSession").addClass("AddSession");
+                    }
+            });
+     });
+
+
+
+    function GetEmail()
+    {
+        var emailtxt = 'Please enter your Email address so we can save your program:<br /><input type="text" id="email" name="email" value="undefined" size="30" /><br />Note: The data saved through the use of the "My Program" feature is not secure. If security is important to you, we recommend you not use this feature.';
+        $.cookies.set('MYPROGRAMEMAIL', $.prompt(emailtxt,{submit: setcookie, show:'slideDown', prefix:'jqueryprompt'}),  { path: '/', expires: 240, domain: 'amstat.org' });
+    }
+
+    function isValidEmailAddress(emailAddress)
+        {
+            var pattern = new RegExp(/^(("[\w-\s]+")|([\w-]+(?:\.[\w-]+)*)|("[\w-\s]+")([\w-]+(?:\.[\w-]+)*))(@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$)|(@\[?((25[0-5]\.|2[0-4][0-9]\.|1[0-9]{2}\.|[0-9]{1,2}\.))((25[0-5]|2[0-4][0-9]|1[0-9]{2}|[0-9]{1,2})\.){2}(25[0-5]|2[0-4][0-9]|1[0-9]{2}|[0-9]{1,2})\]?$)/i);
+             return pattern.test(emailAddress);
+        }
+
+    function setcookie(v,m,f)
+             {
+                var myemail = document.getElementById('email').value;
+
+                if(isValidEmailAddress(myemail))
+                {
+                    $.cookies.set('MYPROGRAMEMAIL', myemail,  { path: '/', expires: 240, domain: 'amstat.org' });
+                    $.prompt('Thank you. You can now add sessions to your personal program.',{show:'slideDown', prefix:'jqueryprompt'});
+                    //window.location.reload(true);
+                }
+                else
+                {
+                    $.prompt('You must enter a valid email address to use the My Program feature',{show:'slideDown', prefix:'jqueryprompt'})
+                }
+            }
+
+
+</script>
+
+</head>
+
+
+<body data-gr-c-s-loaded="true">
+<div class="header">
+    
+        <div id="navbar">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xs-12 col-sm-3" id="logo">
+                        <a href="https://ww2.amstat.org/meetings/jsm/2019/onlineprogram/index.cfm" class=""><img src="./jsm2019-pd_files/logo.png" alt="2019 Joint Statistical Meetings - Statistics: Making an Impact - Denver, Colorado"></a><br>
+                        <span class="jsmtheme">Statistics: Making an Impact</span><br>
+                        <span class="jsmdates">July 27 – August 1, 2019</span><br>
+                        <span class="jsmlocation">Colorado Convention Center</span>
+                    </div>
+                    <div class="col-xs-12 col-sm-9">
+                       <h1 class="apptitle">JSM 2019 Online Program</h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="returnhome">
+        <div class="row">
+            <div class="col-xs-12 center">
+                <a href="https://ww2.amstat.org/meetings/jsm/2019/index.cfm" class="">Return to main conference page</a>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-12">
+                <div class="content">
+                    <div id="bottom">
+
+
+                <table width="98%" border="0" cellpadding="2" align="center">
+    <tbody><tr>
+        <td align="center">
+
+            
+                    <a href="https://ww2.amstat.org/meetings/jsm/2019/onlineprogram/index.cfm" class=""><img src="./jsm2019-pd_files/onlineprogramhome_btn.gif" alt="Online Program Home" title="Online Program Home"></a><br>
+            
+                    <table width="100%">
+                        <tbody><tr>
+                            <td style="width:42%;">&nbsp;</td>
+                            <td style="vertical-align:middle;width:31%;">
+                                <a href="https://ww2.amstat.org/meetings/jsm/2019/onlineprogram/MyProgram.cfm" class=""><img src="./jsm2019-pd_files/myprogram_btn.gif" alt="My Program" title="My Program"></a><br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;<a href="https://ww2.amstat.org/meetings/jsm/2019/pdfs/JSM2019-QuickGuide.pdf" class="">Quick Guide (PDF)</a></td>
+                            <td style="vertical-align:middle;width:27%;text-align:center;"><a class="button" href="https://ww2.amstat.org/meetings/jsm/2019/registration.cfm">Register Now!</a></td>
+                    </tr></tbody></table>
+                <div align="center">
+		
+		<b>Legend:</b><br>
+    <b>CC</b> =  Colorado Convention Center&nbsp;&nbsp;&nbsp;<b>H</b> = Hyatt Regency Denver at Colorado Convention Center
+		<br>
+		* = applied session &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;! = JSM meeting theme
+	</div><br>
+      
+
+<div id="separator"><h4>Activity Details</h4></div>
+
+<table width="100%" bgcolor="white" cellspacing="4" cellpadding="0">
+    <tbody><tr>
+        <td style="width: 10%;">
+                    
+                        <input type="button" value="Add to My Program" class="AddSession" id="218784" name="218784">
+                        <br>
+                    
+                        <a href="https://www.amstat.org/EventDetail?Eventkey=JSM2019" target="_blank" class=""><img src="./jsm2019-pd_files/register_btn.gif" alt="Register"></a>
+                
+            <a href="https://ww2.amstat.org/meetings/jsm/2019/onlineprogram/ActivityDetails.cfm?SessionID=218784" title="218784" class="">
+            CE_42P 
+            </a>
+        </td>
+        <td>
+            <b> Sat, 7/27/2019,
+                8:00 AM -
+                12:00 PM </b>
+        </td>
+        <td>
+            
+            <b>CC-304</b>
+        </td>
+    </tr>
+    <tr>
+        <td colspan="3">
+            <b>Essential Collaboration Skills (ADDED FEE) — Professional Development Personal Skills Development</b>
+        </td>
+    </tr>
+    <tr>
+        <td colspan="3">
+            ASA 
+        </td>
+    </tr>
+    
+    <tr>
+        <td colspan="3">
+            <em>Instructor(s): Eric  Vance, LISA-University of Colorado Boulder; Heather S Smith, Cal Poly, San Luis Obispo</em>
+        </td>
+    </tr>
+    
+            <tr>
+                <td colspan="3">
+                    Statisticians and data scientists often have the opportunity to collaborate with domain experts from many different fields in academia, business, and government. Learning more effective collaboration skills will enable us to maximize our professional impact in these areas. In this workshop, participants will learn and practice essential skills that will enable them to improve their collaborations with domain experts and add more value to their projects, customers, and organizations. We will introduce the ASCCR framework we find useful for guiding and improving collaborations. This framework describes our current best practices for five aspects of statistical consulting and collaboration (Attitude-Structure-Content-Communication-Relationship). Specifically, participants will learn how to:
+
+* 	establish foundational Attitudes that lead to more effective collaborations
+* 	implement the POWER Structure for conducting effective meetings
+* 	apply our Q1Q2Q3 approach to the Content of statistical consultations and collaborations
+* 	communicate more effectively with non-statisticians, using our Triangle of Statistical Communication
+* 	adopt practical strategies to strengthen Relationships with domain experts.
+
+Participants will practice their newly acquired skills and improve their proficiency with these skills by participating in role-plays, video coaching and feedback sessions, and reflection exercises. In sum, participants will learn and practice how to more effectively collaborate, allowing them to have greater impact in their roles as statisticians and data scientists.
+                </td>
+            </tr>
+        
+                    <tr>
+                        <td valign="top" align="right">
+
+                            8:00 AM 
+                        </td>
+                        <td colspan="2">
+                            <a href="https://ww2.amstat.org/meetings/jsm/2019/onlineprogram/AbstractDetails.cfm?abstractid=308069" class="">Essential Collaboration Skills (ADDED FEE)</a>
+                            
+                            <br>
+
+                            <b>Eric  Vance, LISA-University of Colorado Boulder</b>; <b>Heather S Smith, Cal Poly, San Luis Obispo</b> 
+
+
+
+                        </td>
+                    </tr>
+                
+    <tr>
+        <td colspan="3">&nbsp;</td>
+    </tr>
+    <tr>
+        <td colspan="3" style="border-top:1px solid #cccccc;">&nbsp;</td>
+    </tr>
+</tbody></table>
+
+<table width="100%" bgcolor="white" cellspacing="4" cellpadding="0">
+    <tbody><tr>
+        <td style="width: 10%;">
+                    
+                        <input type="button" value="Add to My Program" class="AddSession" id="218729" name="218729">
+                        <br>
+                    
+                        <a href="https://www.amstat.org/EventDetail?Eventkey=JSM2019" target="_blank" class=""><img src="./jsm2019-pd_files/register_btn.gif" alt="Register"></a>
+                
+            <a href="https://ww2.amstat.org/meetings/jsm/2019/onlineprogram/ActivityDetails.cfm?SessionID=218729" title="218729" class="">
+            CE_01C 
+            </a>
+        </td>
+        <td>
+            <b> Sat, 7/27/2019,
+                8:30 AM -
+                5:00 PM </b>
+        </td>
+        <td>
+            
+            <b>CC-401/402</b>
+        </td>
+    </tr>
+    <tr>
+        <td colspan="3">
+            <b>Welcome to the Tidyverse: Reproducible Data Science with R (ADDED FEE) — Professional Development Continuing Education Course</b>
+        </td>
+    </tr>
+    <tr>
+        <td colspan="3">
+            <b>ASA</b> 
+        </td>
+    </tr>
+    
+    <tr>
+        <td colspan="3">
+            <em>Instructor(s): Garrett  Grolemund, RStudio Inc.</em>
+        </td>
+    </tr>
+    
+            <tr>
+                <td colspan="3">
+                    This hands-on workshop will teach you an efficient workflow for doing end-to-end data science with the R programming language. You'll learn to access data from a variety of sources (including csv files, excel spreadsheets, and databases); to visualize, transform, and model data with R's Tidyverse, which is a core set of R packages built for modern data science; and to communicate your results with R Markdown, R's authoring format for reproducible research. Along the way, you will focus on practices that make your work more reproducible, and hence easier to replicate, share, hand off, automate, schedule, rerun with new data, and resume after a hiatus. Bring your laptop!
+
+The workshop will be led by Garrett Grolemund, RStudio's Master Instructor and the co-author of R for Data Science and R Markdown: The Definitive Guide. I will assume that you have a very basic knowledge of how to run commands with R.
+                </td>
+            </tr>
+        
+                    <tr>
+                        <td valign="top" align="right">
+
+                            8:30 AM 
+                        </td>
+                        <td colspan="2">
+                            <a href="https://ww2.amstat.org/meetings/jsm/2019/onlineprogram/AbstractDetails.cfm?abstractid=308027" class="">Welcome to the Tidyverse: Reproducible Data Science with R (ADDED FEE)</a>
+                            
+                            <br>
+
+                            <b>Garrett  Grolemund, RStudio Inc.</b> 
+
+
+
+                        </td>
+                    </tr>
+                
+    <tr>
+        <td colspan="3">&nbsp;</td>
+    </tr>
+    <tr>
+        <td colspan="3" style="border-top:1px solid #cccccc;">&nbsp;</td>
+    </tr>
+</tbody></table>
+
+<table width="100%" bgcolor="white" cellspacing="4" cellpadding="0">
+    <tbody><tr>
+        <td style="width: 10%;">
+                    
+                        <input type="button" value="Add to My Program" class="AddSession" id="218187" name="218187">
+                        <br>
+                    
+                        <a href="https://www.amstat.org/EventDetail?Eventkey=JSM2019" target="_blank" class=""><img src="./jsm2019-pd_files/register_btn.gif" alt="Register"></a>
+                
+            <a href="https://ww2.amstat.org/meetings/jsm/2019/onlineprogram/ActivityDetails.cfm?SessionID=218187" title="218187" class="">
+            CE_02C 
+            </a>
+        </td>
+        <td>
+            <b> Sat, 7/27/2019,
+                8:30 AM -
+                5:00 PM </b>
+        </td>
+        <td>
+            
+            <b>CC-407</b>
+        </td>
+    </tr>
+    <tr>
+        <td colspan="3">
+            <b>Reproducible Computing (ADDED FEE) — Professional Development Continuing Education Course</b>
+        </td>
+    </tr>
+    <tr>
+        <td colspan="3">
+            <b>ASA</b>, Biometrics Section 
+        </td>
+    </tr>
+    
+    <tr>
+        <td colspan="3">
+            <em>Instructor(s): Colin  Rundel, Duke University</em>
+        </td>
+    </tr>
+    
+            <tr>
+                <td colspan="3">
+                    Success in statistics and data science is dependent on the development of both analytical and computational skills. This workshop will cover:
+
+- Recognizing the problems that reproducible research helps address.
+- Identifying pain points in getting your analysis to be reproducible.
+- The role of documentation, sharing, version control, automation, and organization in making your research more reproducible.
+- Introducing tools to solve these problems, specifically R, RStudio, RMarkdown, git, GitHub, and make.
+- Strategies for scaling these tools and methods for larger more complex projects.
+
+Workshop attendees will work through several exercises and get first-hand experience with using relevant tool-chains and techniques, including R/RStudio, literate programming with R Markdown, automation with make, and collaboration and version control with git/GitHub.
+                </td>
+            </tr>
+        
+                    <tr>
+                        <td valign="top" align="right">
+
+                            8:30 AM 
+                        </td>
+                        <td colspan="2">
+                            <a href="https://ww2.amstat.org/meetings/jsm/2019/onlineprogram/AbstractDetails.cfm?abstractid=308032" class="">Reproducible Computing (ADDED FEE)</a>
+                            
+                            <br>
+
+                            <b>Colin  Rundel, Duke University</b> 
+
+
+
+                        </td>
+                    </tr>
+                
+    <tr>
+        <td colspan="3">&nbsp;</td>
+    </tr>
+    <tr>
+        <td colspan="3" style="border-top:1px solid #cccccc;">&nbsp;</td>
+    </tr>
+</tbody></table>
+
+<table width="100%" bgcolor="white" cellspacing="4" cellpadding="0">
+    <tbody><tr>
+        <td style="width: 10%;">
+                    
+                        <input type="button" value="Add to My Program" class="AddSession" id="218190" name="218190">
+                        <br>
+                    
+                        <a href="https://www.amstat.org/EventDetail?Eventkey=JSM2019" target="_blank" class=""><img src="./jsm2019-pd_files/register_btn.gif" alt="Register"></a>
+                
+            <a href="https://ww2.amstat.org/meetings/jsm/2019/onlineprogram/ActivityDetails.cfm?SessionID=218190" title="218190" class="">
+            CE_03C 
+            </a>
+        </td>
+        <td>
+            <b> Sat, 7/27/2019,
+                8:30 AM -
+                5:00 PM </b>
+        </td>
+        <td>
+            
+            <b>CC-403/404</b>
+        </td>
+    </tr>
+    <tr>
+        <td colspan="3">
+            <b>Big Data, Data Science and Deep Learning for Statistician (ADDED FEE) — Professional Development Continuing Education Course</b>
+        </td>
+    </tr>
+    <tr>
+        <td colspan="3">
+            <b>ASA</b>, Quality and Productivity Section, Section on Physical and Engineering Sciences 
+        </td>
+    </tr>
+    
+    <tr>
+        <td colspan="3">
+            <em>Instructor(s): Ming  Li, Amazon; Hui  Lin, Netlify</em>
+        </td>
+    </tr>
+    
+            <tr>
+                <td colspan="3">
+                    With recent big data, data science and deep learning revolution, enterprises ranging from FORTUNE 100 to startups across the world are hungry for data scientists and machine learning scientists to bring actionable insight from the vast amount of data collected. In the past a couple of years, deep learning has gained traction in many application areas and it becomes an essential tool in data scientist’s toolbox. In this course, participant will develop a clear understanding of the big data cloud platform, technical skills in data sciences and machine learning, and especially the motivation and use cases of deep learning through hands-on exercises. We will also cover the “art” part of data science and machine learning to guide participants to learn typical agile data science project flow, general pitfalls in data science and machine learning, and soft skills to effectively communicate with business stakeholders. The big data platform, data science, and deep learning overviews are specifically designed for audience with statistics education background. This course will prepare statisticians to be successful data scientists and machine learning scientist in various industries and business sectors with deep learning as focuses.
+                </td>
+            </tr>
+        
+                    <tr>
+                        <td valign="top" align="right">
+
+                            8:30 AM 
+                        </td>
+                        <td colspan="2">
+                            <a href="https://ww2.amstat.org/meetings/jsm/2019/onlineprogram/AbstractDetails.cfm?abstractid=308031" class="">Big Data, Data Science and Deep Learning for Statistician (ADDED FEE)</a>
+                            
+                            <br>
+
+                            <b>Hui  Lin, Netlify</b>; <b>Ming  Li, Amazon</b> 
+
+
+
+                        </td>
+                    </tr>
+                
+    <tr>
+        <td colspan="3">&nbsp;</td>
+    </tr>
+    <tr>
+        <td colspan="3" style="border-top:1px solid #cccccc;">&nbsp;</td>
+    </tr>
+</tbody></table>
+
+<table width="100%" bgcolor="white" cellspacing="4" cellpadding="0">
+    <tbody><tr>
+        <td style="width: 10%;">
+                    
+                        <input type="button" value="Add to My Program" class="AddSession" id="218193" name="218193">
+                        <br>
+                    
+                        <a href="https://www.amstat.org/EventDetail?Eventkey=JSM2019" target="_blank" class=""><img src="./jsm2019-pd_files/register_btn.gif" alt="Register"></a>
+                
+            <a href="https://ww2.amstat.org/meetings/jsm/2019/onlineprogram/ActivityDetails.cfm?SessionID=218193" title="218193" class="">
+            CE_04C 
+            </a>
+        </td>
+        <td>
+            <b> Sat, 7/27/2019,
+                8:30 AM -
+                5:00 PM </b>
+        </td>
+        <td>
+            
+            <b>CC-303</b>
+        </td>
+    </tr>
+    <tr>
+        <td colspan="3">
+            <b>Bayesian Thinking: Fundamentals, Computation, and Multilevel Modeling (ADDED FEE) — Professional Development Continuing Education Course</b>
+        </td>
+    </tr>
+    <tr>
+        <td colspan="3">
+            <b>ASA</b> 
+        </td>
+    </tr>
+    
+    <tr>
+        <td colspan="3">
+            <em>Instructor(s): Jim  Albert, Bowling Green State University</em>
+        </td>
+    </tr>
+    
+            <tr>
+                <td colspan="3">
+                    The basic tenets of Bayesian thinking are introduced, including construction of priors, summarization of the posterior to perform inferences, and the use of prediction distributions for prediction and model checking. There will be a focus on Bayesian regression for continuous and categorical response data.  Bayesian multilevel models are introduced as a flexible way of modeling regressions over groups. The use of R in Bayesian computation is described, including the programming of the posterior distribution and the use of different R tools to summarize the posterior.  Special focus will be on the application of Markov chain Monte Carlo algorithms and diagnostic methods to assess convergence of the algorithms.   The LearnBayes and rethinking R packages are used to illustrate MCMC fitting by the use of gibbs sampling and Metropolis algorithms. Larger Bayesian models will be fit using JAGS and Stan and the accompanying runjags and rstan packages.
+                </td>
+            </tr>
+        
+                    <tr>
+                        <td valign="top" align="right">
+
+                            8:30 AM 
+                        </td>
+                        <td colspan="2">
+                            <a href="https://ww2.amstat.org/meetings/jsm/2019/onlineprogram/AbstractDetails.cfm?abstractid=308030" class="">Bayesian Thinking: Fundamentals, Computation, and Multilevel Modeling (ADDED FEE)</a>
+                            
+                            <br>
+
+                            <b>Jim  Albert, Bowling Green State University</b> 
+
+
+
+                        </td>
+                    </tr>
+                
+    <tr>
+        <td colspan="3">&nbsp;</td>
+    </tr>
+    <tr>
+        <td colspan="3" style="border-top:1px solid #cccccc;">&nbsp;</td>
+    </tr>
+</tbody></table>
+
+<table width="100%" bgcolor="white" cellspacing="4" cellpadding="0">
+    <tbody><tr>
+        <td style="width: 10%;">
+                    
+                        <input type="button" value="Add to My Program" class="AddSession" id="218209" name="218209">
+                        <br>
+                    
+                        <a href="https://www.amstat.org/EventDetail?Eventkey=JSM2019" target="_blank" class=""><img src="./jsm2019-pd_files/register_btn.gif" alt="Register"></a>
+                
+            <a href="https://ww2.amstat.org/meetings/jsm/2019/onlineprogram/ActivityDetails.cfm?SessionID=218209" title="218209" class="">
+            CE_05C 
+            </a>
+        </td>
+        <td>
+            <b> Sat, 7/27/2019,
+                8:30 AM -
+                5:00 PM </b>
+        </td>
+        <td>
+            
+            <b>CC-406</b>
+        </td>
+    </tr>
+    <tr>
+        <td colspan="3">
+            <b>Advanced Topics in Propensity Score Methods (ADDED FEE) — Professional Development Continuing Education Course</b>
+        </td>
+    </tr>
+    <tr>
+        <td colspan="3">
+            <b>ASA</b> 
+        </td>
+    </tr>
+    
+    <tr>
+        <td colspan="3">
+            <em>Instructor(s): Wei  Pan, Duke University; Haiyan  Bai, University of Central Florida</em>
+        </td>
+    </tr>
+    
+            <tr>
+                <td colspan="3">
+                    Propensity score methods (PSMs) have become a common practice in observational studies to reduce selection bias. However, researchers still often encounter in-depth methodological challenges in practice. For example, how to check assumptions? How to select covariates? How to deal with multiple treatments? How to deal with complex data such as clustered, longitudinal, or survey data? How to conduct outcome analysis with PSMs? How to conduct sensitivity analysis after applying PSMs? This course will build upon the fundamental principle and concept of PSMs to tackle these in-depth methodological challenges along with relevant R packages, such as hdPS, twang, Zelig, and rbounds. Through lectures on the advanced topics in PSMs and hands-on activities for using the R packages, this course will help researchers better understand PSMs and, therefore, improve the validity of their observational studies. Instructions for downloading and installing the R packages with examples of real-world data will be provided to participants in advance through a course website. A working knowledge of PSMs is required. Participants are encouraged to bring their own computers for hands-on activities on the data provided in the course, and they are also welcomed to work on their own real-world data.
+                </td>
+            </tr>
+        
+                    <tr>
+                        <td valign="top" align="right">
+
+                            8:30 AM 
+                        </td>
+                        <td colspan="2">
+                            <a href="https://ww2.amstat.org/meetings/jsm/2019/onlineprogram/AbstractDetails.cfm?abstractid=308029" class="">Advanced Topics in Propensity Score Methods (ADDED FEE)</a>
+                            
+                            <br>
+
+                            <b>Haiyan  Bai, University of Central Florida</b>; <b>Wei  Pan, Duke University</b> 
+
+
+
+                        </td>
+                    </tr>
+                
+    <tr>
+        <td colspan="3">&nbsp;</td>
+    </tr>
+    <tr>
+        <td colspan="3" style="border-top:1px solid #cccccc;">&nbsp;</td>
+    </tr>
+</tbody></table>
+
+<table width="100%" bgcolor="white" cellspacing="4" cellpadding="0">
+    <tbody><tr>
+        <td style="width: 10%;">
+                    
+                        <input type="button" value="Add to My Program" class="AddSession" id="218738" name="218738">
+                        <br>
+                    
+                        <a href="https://www.amstat.org/EventDetail?Eventkey=JSM2019" target="_blank" class=""><img src="./jsm2019-pd_files/register_btn.gif" alt="Register"></a>
+                
+            <a href="https://ww2.amstat.org/meetings/jsm/2019/onlineprogram/ActivityDetails.cfm?SessionID=218738" title="218738" class="">
+            CE_06C 
+            </a>
+        </td>
+        <td>
+            <b> Sat, 7/27/2019,
+                8:30 AM -
+                5:00 PM </b>
+        </td>
+        <td>
+            
+            <b>CC-405</b>
+        </td>
+    </tr>
+    <tr>
+        <td colspan="3">
+            <b>Bootstrap Learning Python with R (ADDED FEE) — Professional Development Continuing Education Course</b>
+        </td>
+    </tr>
+    <tr>
+        <td colspan="3">
+            <b>ASA</b> 
+        </td>
+    </tr>
+    
+    <tr>
+        <td colspan="3">
+            <em>Instructor(s): Michael  Kane, Yale</em>
+        </td>
+    </tr>
+    
+            <tr>
+                <td colspan="3">
+                    Python is one of the most popular programming languages in the world and it used heavily in
+both computer science communities as well as industry as a language for developing software
+systems. As libraries like numpy, pandas, sklearn, and tensorflow have become more popular it
+has seen increased use in the data science community. As a result, Python has become an
+important language for data scientists looking to expand their repertoire beyond R. This course
+provides a working knowledge of the Python language along with its package. By carefully
+covering analogous code, written in both R and Python, we will use the students understanding
+of the R programming language to “bootstrap” Python programming constructs, data
+structures, and control flows. After these concepts are established, we will explore some of the
+more uniquely “Pythonic” languages quirks, advantages, and challenges. Students of this class
+should have an intermediate-level knowledge of the R programming language.
+                </td>
+            </tr>
+        
+                    <tr>
+                        <td valign="top" align="right">
+
+                            8:30 AM 
+                        </td>
+                        <td colspan="2">
+                            <a href="https://ww2.amstat.org/meetings/jsm/2019/onlineprogram/AbstractDetails.cfm?abstractid=308028" class="">Bootstrap Learning Python with R (ADDED FEE)</a>
+                            
+                            <br>
+
+                            <b>Michael  Kane, Yale</b> 
+
+
+
+                        </td>
+                    </tr>
+                
+    <tr>
+        <td colspan="3">&nbsp;</td>
+    </tr>
+    <tr>
+        <td colspan="3" style="border-top:1px solid #cccccc;">&nbsp;</td>
+    </tr>
+</tbody></table>
+
+<table width="100%" bgcolor="white" cellspacing="4" cellpadding="0">
+    <tbody><tr>
+        <td style="width: 10%;">
+                    
+                        <input type="button" value="Add to My Program" class="AddSession" id="218786" name="218786">
+                        <br>
+                    
+                        <a href="https://www.amstat.org/EventDetail?Eventkey=JSM2019" target="_blank" class=""><img src="./jsm2019-pd_files/register_btn.gif" alt="Register"></a>
+                
+            <a href="https://ww2.amstat.org/meetings/jsm/2019/onlineprogram/ActivityDetails.cfm?SessionID=218786" title="218786" class="">
+            CE_43P 
+            </a>
+        </td>
+        <td>
+            <b> Sat, 7/27/2019,
+                1:00 PM -
+                5:15 PM </b>
+        </td>
+        <td>
+            
+            <b>CC-304</b>
+        </td>
+    </tr>
+    <tr>
+        <td colspan="3">
+            <b>Preparing Statisticians and Data Scientists for Leadership: How to See the Big Picture and Have More Influence (ADDED FEE) — Professional Development Personal Skills Development</b>
+        </td>
+    </tr>
+    <tr>
+        <td colspan="3">
+            <b>ASA</b> 
+        </td>
+    </tr>
+    
+    <tr>
+        <td colspan="3">
+            <em>Instructor(s): Gary  Sullivan; Fang  Chen, SAS Institute Inc</em>
+        </td>
+    </tr>
+    
+            <tr>
+                <td colspan="3">
+                    What is leadership? Much has been written and discussed within the statistics profession in the last few years on the topic and its importance in advancing our profession. This course provides an understanding of leadership and how statisticians can improve and demonstrate leadership to affect their organizations. It features leaders from all sectors of statistics speaking about their personal journeys and provides guidance on personal leadership development with a focus on the larger organizational/business view and influence. Course participants work with their colleagues to discuss and resolve leadership situations that statisticians face. Participants will come away with a plan for developing their own leadership and connect with a network of statisticians who can help them move forward on their leadership journey. Guest speakers include Jennifer Parker, Centers for Disease Control, and Bill Wang, Merck and Company, who will share their leadership journeys as well as insights and guidance on leadership development.
+                </td>
+            </tr>
+        
+                    <tr>
+                        <td valign="top" align="right">
+
+                            1:00 PM 
+                        </td>
+                        <td colspan="2">
+                            <a href="https://ww2.amstat.org/meetings/jsm/2019/onlineprogram/AbstractDetails.cfm?abstractid=308071" class="">Preparing Statisticians and Data Scientists for Leadership: How to See the Big Picture and Have More Influence (ADDED FEE)</a>
+                            
+                            <br>
+
+                            <b>Fang  Chen, SAS Institute Inc</b>; <b>Gary  Sullivan</b> 
+
+
+
+                        </td>
+                    </tr>
+                
+    <tr>
+        <td colspan="3">&nbsp;</td>
+    </tr>
+    <tr>
+        <td colspan="3" style="border-top:1px solid #cccccc;">&nbsp;</td>
+    </tr>
+</tbody></table>
+
+<table width="100%" bgcolor="white" cellspacing="4" cellpadding="0">
+    <tbody><tr>
+        <td style="width: 10%;">
+                    
+                        <input type="button" value="Add to My Program" class="AddSession" id="218197" name="218197">
+                        <br>
+                    
+                        <a href="https://www.amstat.org/EventDetail?Eventkey=JSM2019" target="_blank" class=""><img src="./jsm2019-pd_files/register_btn.gif" alt="Register"></a>
+                
+            <a href="https://ww2.amstat.org/meetings/jsm/2019/onlineprogram/ActivityDetails.cfm?SessionID=218197" title="218197" class="">
+            CE_07C 
+            </a>
+        </td>
+        <td>
+            <b> Sun, 7/28/2019,
+                8:00 AM -
+                12:00 PM </b>
+        </td>
+        <td>
+            
+            <b>CC-406</b>
+        </td>
+    </tr>
+    <tr>
+        <td colspan="3">
+            <b>Statistical and Computational Methods for Microbiome and Metagenomics Data Analysis (ADDED FEE) — Professional Development Continuing Education Course</b>
+        </td>
+    </tr>
+    <tr>
+        <td colspan="3">
+            <b>ASA</b>, Biometrics Section 
+        </td>
+    </tr>
+    
+    <tr>
+        <td colspan="3">
+            <em>Instructor(s): Curtis  Huttenhower, Harvard University ; Hongzhe  Li, University of Pennsylvania</em>
+        </td>
+    </tr>
+    
+            <tr>
+                <td colspan="3">
+                    High throughput sequencing technologies enable individualized characterization of the microbiome composition and functions.  The  human microbiome, defined as community of microbes in and on the human body, impacts human health and risk of disease by dynamically interacting with host diet, genetics, metabolism and environment. The resulting data can potentially be used for personalized diagnostic assessment, risk stratification, disease prevention and treatment.  Microbiome has become one of the most active areas of research in biomedical sciences. New computational and statistical methods are being developed to understand the function of microbial communities.  In this short course,  we will give detailed presentations on the statistical and computational methods for measuring various important features of the microbiome  based on 16S rRNA and shotgun metagenomic sequencing data, and how these features are used as an outcome of an intervention, as a mediator of a treatment and as a covariate to be controlled for when studying disease/exposure associations.  The statistics underlying some of the most popular tools in microbiome data analysis will be presented, including bioBakery tools for meta'omic profiling and tools for microbial community profiling (MetaPhlAn, HUMAnN, Data2, DEMIC, etc), together with advanced methods for compositional data analysis and kernel-based association analysis. 
+                </td>
+            </tr>
+        
+                    <tr>
+                        <td valign="top" align="right">
+
+                            8:00 AM 
+                        </td>
+                        <td colspan="2">
+                            <a href="https://ww2.amstat.org/meetings/jsm/2019/onlineprogram/AbstractDetails.cfm?abstractid=308033" class="">Statistical and Computational Methods for Microbiome and Metagenomics Data Analysis (ADDED FEE)</a>
+                            
+                            <br>
+
+                            <b>Curtis  Huttenhower, Harvard University </b>; <b>Hongzhe  Li, University of Pennsylvania</b> 
+
+
+
+                        </td>
+                    </tr>
+                
+    <tr>
+        <td colspan="3">&nbsp;</td>
+    </tr>
+    <tr>
+        <td colspan="3" style="border-top:1px solid #cccccc;">&nbsp;</td>
+    </tr>
+</tbody></table>
+
+<table width="100%" bgcolor="white" cellspacing="4" cellpadding="0">
+    <tbody><tr>
+        <td style="width: 10%;">
+                    
+                        <input type="button" value="Add to My Program" class="AddSession" id="218785" name="218785">
+                        <br>
+                    
+                        <a href="https://www.amstat.org/EventDetail?Eventkey=JSM2019" target="_blank" class=""><img src="./jsm2019-pd_files/register_btn.gif" alt="Register"></a>
+                
+            <a href="https://ww2.amstat.org/meetings/jsm/2019/onlineprogram/ActivityDetails.cfm?SessionID=218785" title="218785" class="">
+            CE_42P 
+            </a>
+        </td>
+        <td>
+            <b> Sun, 7/28/2019,
+                8:00 AM -
+                12:00 PM </b>
+        </td>
+        <td>
+            
+            <b>CC-304</b>
+        </td>
+    </tr>
+    <tr>
+        <td colspan="3">
+            <b>Essential Collaboration Skills (ADDED FEE) — Professional Development Personal Skills Development</b>
+        </td>
+    </tr>
+    <tr>
+        <td colspan="3">
+            <b>ASA</b> 
+        </td>
+    </tr>
+    
+    <tr>
+        <td colspan="3">
+            <em>Instructor(s): Eric  Vance, LISA-University of Colorado Boulder; Heather S Smith, Cal Poly, San Luis Obispo</em>
+        </td>
+    </tr>
+    
+            <tr>
+                <td colspan="3">
+                    Statisticians and data scientists often have the opportunity to collaborate with domain experts from many different fields in academia, business, and government. Learning more effective collaboration skills will enable us to maximize our professional impact in these areas. In this workshop, participants will learn and practice essential skills that will enable them to improve their collaborations with domain experts and add more value to their projects, customers, and organizations. We will introduce the ASCCR framework we find useful for guiding and improving collaborations. This framework describes our current best practices for five aspects of statistical consulting and collaboration (Attitude-Structure-Content-Communication-Relationship). Specifically, participants will learn how to:
+* •	establish foundational Attitudes that lead to more effective collaborations
+* 	implement the POWER Structure for conducting effective meetings
+* 	apply our Q1Q2Q3 approach to the Content of statistical consultations and collaborations
+* 	communicate more effectively with non-statisticians, using our Triangle of Statistical Communication
+* 	adopt practical strategies to strengthen Relationships with domain experts.
+
+Participants will practice their newly acquired skills and improve their proficiency with these skills by participating in role-plays, video coaching and feedback sessions, and reflection exercises. In sum, participants will learn and practice how to more effectively collaborate, allowing them to have greater impact in their roles as statisticians and data scientists.
+                </td>
+            </tr>
+        
+                    <tr>
+                        <td valign="top" align="right">
+
+                            8:00 AM 
+                        </td>
+                        <td colspan="2">
+                            <a href="https://ww2.amstat.org/meetings/jsm/2019/onlineprogram/AbstractDetails.cfm?abstractid=308070" class="">Essential Collaboration Skills (ADDED FEE)</a>
+                            
+                            <br>
+
+                            <b>Eric  Vance, LISA-University of Colorado Boulder</b>; <b>Heather S Smith, Cal Poly, San Luis Obispo</b> 
+
+
+
+                        </td>
+                    </tr>
+                
+    <tr>
+        <td colspan="3">&nbsp;</td>
+    </tr>
+    <tr>
+        <td colspan="3" style="border-top:1px solid #cccccc;">&nbsp;</td>
+    </tr>
+</tbody></table>
+
+<table width="100%" bgcolor="white" cellspacing="4" cellpadding="0">
+    <tbody><tr>
+        <td style="width: 10%;">
+                    
+                        <input type="button" value="Add to My Program" class="AddSession" id="218730" name="218730">
+                        <br>
+                    
+                        <a href="https://www.amstat.org/EventDetail?Eventkey=JSM2019" target="_blank" class=""><img src="./jsm2019-pd_files/register_btn.gif" alt="Register"></a>
+                
+            <a href="https://ww2.amstat.org/meetings/jsm/2019/onlineprogram/ActivityDetails.cfm?SessionID=218730" title="218730" class="">
+            CE_01C 
+            </a>
+        </td>
+        <td>
+            <b> Sun, 7/28/2019,
+                8:30 AM -
+                5:00 PM </b>
+        </td>
+        <td>
+            
+            <b>CC-401/402</b>
+        </td>
+    </tr>
+    <tr>
+        <td colspan="3">
+            <b>Welcome to the Tidyverse: Reproducible Data Science with R (ADDED FEE) — Professional Development Continuing Education Course</b>
+        </td>
+    </tr>
+    <tr>
+        <td colspan="3">
+            <b>ASA</b> 
+        </td>
+    </tr>
+    
+    <tr>
+        <td colspan="3">
+            <em>Instructor(s): Garrett  Grolemund, RStudio Inc.</em>
+        </td>
+    </tr>
+    
+            <tr>
+                <td colspan="3">
+                    This hands-on workshop will teach you an efficient workflow for doing end-to-end data science with the R programming language. You'll learn to access data from a variety of sources (including csv files, excel spreadsheets, and databases); to visualize, transform, and model data with R's Tidyverse, which is a core set of R packages built for modern data science; and to communicate your results with R Markdown, R's authoring format for reproducible research. Along the way, you will focus on practices that make your work more reproducible, and hence easier to replicate, share, hand off, automate, schedule, rerun with new data, and resume after a hiatus. Bring your laptop!
+                </td>
+            </tr>
+        
+                    <tr>
+                        <td valign="top" align="right">
+
+                            8:30 AM 
+                        </td>
+                        <td colspan="2">
+                            <a href="https://ww2.amstat.org/meetings/jsm/2019/onlineprogram/AbstractDetails.cfm?abstractid=308038" class="">Welcome to the Tidyverse: Reproducible Data Science with R (ADDED FEE)</a>
+                            
+                            <br>
+
+                            <b>Garrett  Grolemund, RStudio Inc.</b> 
+
+
+
+                        </td>
+                    </tr>
+                
+    <tr>
+        <td colspan="3">&nbsp;</td>
+    </tr>
+    <tr>
+        <td colspan="3" style="border-top:1px solid #cccccc;">&nbsp;</td>
+    </tr>
+</tbody></table>
+
+<table width="100%" bgcolor="white" cellspacing="4" cellpadding="0">
+    <tbody><tr>
+        <td style="width: 10%;">
+                    
+                        <input type="button" value="Add to My Program" class="AddSession" id="217945" name="217945">
+                        <br>
+                    
+                        <a href="https://www.amstat.org/EventDetail?Eventkey=JSM2019" target="_blank" class=""><img src="./jsm2019-pd_files/register_btn.gif" alt="Register"></a>
+                
+            <a href="https://ww2.amstat.org/meetings/jsm/2019/onlineprogram/ActivityDetails.cfm?SessionID=217945" title="217945" class="">
+            CE_08C 
+            </a>
+        </td>
+        <td>
+            <b> Sun, 7/28/2019,
+                8:30 AM -
+                5:00 PM </b>
+        </td>
+        <td>
+            
+            <b>CC-403/404</b>
+        </td>
+    </tr>
+    <tr>
+        <td colspan="3">
+            <b>Practical Considerations for Bayesian and Frequentist Adaptive Clinical Trials (ADDED FEE) — Professional Development Continuing Education Course</b>
+        </td>
+    </tr>
+    <tr>
+        <td colspan="3">
+            <b>ASA</b>, Section on Bayesian Statistical Science 
+        </td>
+    </tr>
+    
+    <tr>
+        <td colspan="3">
+            <em>Instructor(s): Peter  Müller, University of Texas Austin; Byron  Jones, Novartis Pharma AG; Frank  Bretz, Novartis Pharma AG</em>
+        </td>
+    </tr>
+    
+            <tr>
+                <td colspan="3">
+                    Clinical trials play a critical role in pharmaceutical drug development. New trial designs often depend on historical data, which, however, may not be accurate for the current study due to changes in study populations, patient heterogeneity, or different medical facilities. As a result, the original plan and study design may need to be adjusted or even altered to accommodate new findings and unexpected interim results. Through carefully thought-out and planned adaptation, the right dose can be identified faster, patients can be treated more effectively, and treatment effects evaluated more efficiently.
+This one-day short course will introduce various adaptive methods for Phase I to Phase III clinical trials using both, frequentist and Bayesian methods. Accordingly, different types of adaptive designs will be introduced and practical considerations will be illustrated with case studies. Types of adaptive clinical trial designs covered in this course include dose escalation/de-escalation and dose insertion based on observed data, adaptive dose finding studies using optimal designs to allocate new cohorts of patients based on the accumulated evidence, blinded and unblinded sample size reestimation as well as adaptive designs for confirmatory trials with treatment or population selection at interim. 
+
+                </td>
+            </tr>
+        
+                    <tr>
+                        <td valign="top" align="right">
+
+                            8:30 AM 
+                        </td>
+                        <td colspan="2">
+                            <a href="https://ww2.amstat.org/meetings/jsm/2019/onlineprogram/AbstractDetails.cfm?abstractid=308037" class="">Practical Considerations for Bayesian and Frequentist Adaptive Clinical Trials (ADDED FEE)</a>
+                            
+                            <br>
+
+                            <b>Byron  Jones, Novartis Pharma AG</b>; <b>Frank  Bretz, Novartis Pharma AG</b>; <b>Peter  Müller, University of Texas Austin</b> 
+
+
+
+                        </td>
+                    </tr>
+                
+    <tr>
+        <td colspan="3">&nbsp;</td>
+    </tr>
+    <tr>
+        <td colspan="3" style="border-top:1px solid #cccccc;">&nbsp;</td>
+    </tr>
+</tbody></table>
+
+<table width="100%" bgcolor="white" cellspacing="4" cellpadding="0">
+    <tbody><tr>
+        <td style="width: 10%;">
+                    
+                        <input type="button" value="Add to My Program" class="AddSession" id="218184" name="218184">
+                        <br>
+                    
+                        <a href="https://www.amstat.org/EventDetail?Eventkey=JSM2019" target="_blank" class=""><img src="./jsm2019-pd_files/register_btn.gif" alt="Register"></a>
+                
+            <a href="https://ww2.amstat.org/meetings/jsm/2019/onlineprogram/ActivityDetails.cfm?SessionID=218184" title="218184" class="">
+            CE_09C 
+            </a>
+        </td>
+        <td>
+            <b> Sun, 7/28/2019,
+                8:30 AM -
+                5:00 PM </b>
+        </td>
+        <td>
+            
+            <b>CC-303</b>
+        </td>
+    </tr>
+    <tr>
+        <td colspan="3">
+            <b>Regression Modeling Strategies (ADDED FEE) — Professional Development Continuing Education Course</b>
+        </td>
+    </tr>
+    <tr>
+        <td colspan="3">
+            <b>ASA</b>, Biometrics Section 
+        </td>
+    </tr>
+    
+    <tr>
+        <td colspan="3">
+            <em>Instructor(s): Frank  Harrell, Vanderbilt University</em>
+        </td>
+    </tr>
+    
+            <tr>
+                <td colspan="3">
+                    All standard regression models have assumptions that must be verified for the model to have power to test hypotheses and for it to be able to predict accurately. Of the principal assumptions (linearity, additivity, distributional), this course will emphasize methods for assessing and satisfying the first two. Practical but powerful tools are presented for validating model assumptions and presenting model results. This course provides methods for estimating the shape of the relationship between predictors and response using the widely applicable method of augmenting the design matrix using restricted cubic splines. Even when assumptions are satisfied, overfitting can ruin a model’s predictive ability for future observations. Methods for data reduction will be introduced to deal with the common case where the number of potential predictors is large in comparison with the number of observations. Methods of model validation (bootstrap and cross–validation) will be covered, as will auxiliary topics such as modeling interaction surfaces, variable selection, overly influential observations, collinearity, and shrinkage, and a brief introduction to the R rms package for handling these problems. The methods covered will apply to almost any regression model, including ordinary least squares, logistic regression models, ordinal regression, quantile regression, longitudinal data analysis, and survival models.
+                </td>
+            </tr>
+        
+                    <tr>
+                        <td valign="top" align="right">
+
+                            8:30 AM 
+                        </td>
+                        <td colspan="2">
+                            <a href="https://ww2.amstat.org/meetings/jsm/2019/onlineprogram/AbstractDetails.cfm?abstractid=308035" class="">Regression Modeling Strategies (ADDED FEE)</a>
+                            
+                            <br>
+
+                            <b>Frank  Harrell, Vanderbilt University</b> 
+
+
+
+                        </td>
+                    </tr>
+                
+    <tr>
+        <td colspan="3">&nbsp;</td>
+    </tr>
+    <tr>
+        <td colspan="3" style="border-top:1px solid #cccccc;">&nbsp;</td>
+    </tr>
+</tbody></table>
+
+<table width="100%" bgcolor="white" cellspacing="4" cellpadding="0">
+    <tbody><tr>
+        <td style="width: 10%;">
+                    
+                        <input type="button" value="Add to My Program" class="AddSession" id="218189" name="218189">
+                        <br>
+                    
+                        <a href="https://www.amstat.org/EventDetail?Eventkey=JSM2019" target="_blank" class=""><img src="./jsm2019-pd_files/register_btn.gif" alt="Register"></a>
+                
+            <a href="https://ww2.amstat.org/meetings/jsm/2019/onlineprogram/ActivityDetails.cfm?SessionID=218189" title="218189" class="">
+            CE_10C 
+            </a>
+        </td>
+        <td>
+            <b> Sun, 7/28/2019,
+                8:30 AM -
+                5:00 PM </b>
+        </td>
+        <td>
+            
+            <b>CC-407</b>
+        </td>
+    </tr>
+    <tr>
+        <td colspan="3">
+            <b>Teaching Data Science (ADDED FEE) — Professional Development Continuing Education Course</b>
+        </td>
+    </tr>
+    <tr>
+        <td colspan="3">
+            <b>ASA</b>, Section on Statistical Computing, Section on Statistics and Data Science Education 
+        </td>
+    </tr>
+    
+    <tr>
+        <td colspan="3">
+            <em>Instructor(s): Mine  Cetinkaya-Rundel, Duke University</em>
+        </td>
+    </tr>
+    
+            <tr>
+                <td colspan="3">
+                    Success in data science and statistics is dependent on the development of both analytical and computational skills. As statistics educators we are more familiar and comfortable with teaching the former, but the latter is becoming increasingly important. The goal of this workshop is to equip educators with concrete information on content and infrastructure for painlessly introducing modern computation into a data science and/or statistics curriculum. In addition to gaining technical knowledge, participants will engage in discussion around the decisions that go into choosing infrastructure and developing curriculum. Workshop attendees will work through several exercises from existing courses and get first-hand experience with using relevant tool-chains and techniques, including R/RStudio, literate programming with R Markdown, and collaboration, version control, and automated feedback with Git/GitHub. We will also discuss best practices for configuring and deploying classroom infrastructures to support these tools.
+
+This workshop is aimed at participants who are interested in the role of computing in either a Statistics or Data Science curriculum, including faculty designing new courses/programs and those interested in adding or improving a computational component to an existing course. A basic knowledge of R is assumed and familiarity with Git is preferred.
+                </td>
+            </tr>
+        
+                    <tr>
+                        <td valign="top" align="right">
+
+                            8:30 AM 
+                        </td>
+                        <td colspan="2">
+                            <a href="https://ww2.amstat.org/meetings/jsm/2019/onlineprogram/AbstractDetails.cfm?abstractid=308036" class="">Teaching Data Science (ADDED FEE)</a>
+                            
+                            <br>
+
+                            <b>Mine  Cetinkaya-Rundel, Duke University</b> 
+
+
+
+                        </td>
+                    </tr>
+                
+    <tr>
+        <td colspan="3">&nbsp;</td>
+    </tr>
+    <tr>
+        <td colspan="3" style="border-top:1px solid #cccccc;">&nbsp;</td>
+    </tr>
+</tbody></table>
+
+<table width="100%" bgcolor="white" cellspacing="4" cellpadding="0">
+    <tbody><tr>
+        <td style="width: 10%;">
+                    
+                        <input type="button" value="Add to My Program" class="AddSession" id="218208" name="218208">
+                        <br>
+                    
+                        <a href="https://www.amstat.org/EventDetail?Eventkey=JSM2019" target="_blank" class=""><img src="./jsm2019-pd_files/register_btn.gif" alt="Register"></a>
+                
+            <a href="https://ww2.amstat.org/meetings/jsm/2019/onlineprogram/ActivityDetails.cfm?SessionID=218208" title="218208" class="">
+            CE_11C 
+            </a>
+        </td>
+        <td>
+            <b> Sun, 7/28/2019,
+                8:30 AM -
+                5:00 PM </b>
+        </td>
+        <td>
+            
+            <b>CC-405</b>
+        </td>
+    </tr>
+    <tr>
+        <td colspan="3">
+            <b>Statistical Network Analysis and Applications in Biology (ADDED FEE) — Professional Development Continuing Education Course</b>
+        </td>
+    </tr>
+    <tr>
+        <td colspan="3">
+            <b>ASA</b>, Section on Statistical Learning and Data Science 
+        </td>
+    </tr>
+    
+    <tr>
+        <td colspan="3">
+            <em>Instructor(s): Ali  Shojaie, University of Washington; George  Michailidis, University of Florida</em>
+        </td>
+    </tr>
+    
+            <tr>
+                <td colspan="3">
+                    This one-day course will provide a practical introduction to statistical network analysis methods for biological application. The course will cover four classes of methods: statistical methods for network data analysis; inference methods for undirected networks; inference methods for directed networks; and differential network analysis. The methods covered include methods that are widely used in biological applications and, in particular, in the analysis of -omics data, as well as recent developments in statistical machine learning. Throughout, the emphasis will be on practical applications of network analysis methods, as well as their limitations, including validation of results. Case studies using publicly available data will be used to describe various statistical network analysis methods. 
+
+The course is based on two short courses taught by the instructors: Since 2012, Dr. Shojaie has taught a short course titled “Pathway and Network Analysis of Omics Data” at the University of Washington. This 2.5-day course has been well received with more than 40 participants in each offering. Dr. Michailidis has taught a 1.5-day short course from 2014-2017 on the statistical analysis of metabolomics data that included a substantial portion on network analysis, and has attracted approximately 50 participants in each offering. 
+                </td>
+            </tr>
+        
+                    <tr>
+                        <td valign="top" align="right">
+
+                            8:30 AM 
+                        </td>
+                        <td colspan="2">
+                            <a href="https://ww2.amstat.org/meetings/jsm/2019/onlineprogram/AbstractDetails.cfm?abstractid=308034" class="">Statistical Network Analysis and Applications in Biology (ADDED FEE)</a>
+                            
+                            <br>
+
+                            <b>Ali  Shojaie, University of Washington</b>; <b>George  Michailidis, University of Florida</b> 
+
+
+
+                        </td>
+                    </tr>
+                
+    <tr>
+        <td colspan="3">&nbsp;</td>
+    </tr>
+    <tr>
+        <td colspan="3" style="border-top:1px solid #cccccc;">&nbsp;</td>
+    </tr>
+</tbody></table>
+
+<table width="100%" bgcolor="white" cellspacing="4" cellpadding="0">
+    <tbody><tr>
+        <td style="width: 10%;">
+                    
+                        <input type="button" value="Add to My Program" class="AddSession" id="218788" name="218788">
+                        <br>
+                    
+            <a href="https://ww2.amstat.org/meetings/jsm/2019/onlineprogram/ActivityDetails.cfm?SessionID=218788" title="218788" class="">
+            CE_44P 
+            </a>
+        </td>
+        <td>
+            <b> Sun, 7/28/2019,
+                10:30 AM -
+                12:30 PM </b>
+        </td>
+        <td>
+            
+            <b>CC-603</b>
+        </td>
+    </tr>
+    <tr>
+        <td colspan="3">
+            <b>JSM Presentation Skills Workshop (FREE - NO REGISTRATION REQUIRED) — Professional Development Personal Skills Development</b>
+        </td>
+    </tr>
+    <tr>
+        <td colspan="3">
+            <b>ASA</b> 
+        </td>
+    </tr>
+    
+    <tr>
+        <td colspan="3">
+            <em>Organizer(s): Brian  Wiens, Allergan</em>
+        </td>
+    </tr>
+    
+            <tr>
+                <td colspan="3">
+                    A panel of experienced and award-winning presenters will share advice about speaking at JSM. Topics will include the following: Engaging the audience, Effective practice techniques, organizing your talk, visual aids, answering audience questions, and speaking in a language other than your native tongue. All presenters are welcome, though first-time speakers at JSM are especially encouraged to attend. Also, anyone who is considering a future JSM presentation, or just wants to hear more about the art of scientific speaking, is welcome.
+                </td>
+            </tr>
+        
+                    <tr>
+                        <td valign="top" align="right">
+
+                            10:30 AM 
+                        </td>
+                        <td colspan="2">
+                            <a href="https://ww2.amstat.org/meetings/jsm/2019/onlineprogram/AbstractDetails.cfm?abstractid=308073" class="">JSM Presentation Skills Workshop (FREE - NO REGISTRATION REQUIRED)</a>
+                            
+                            <br>
+
+                            <b>Brian  Wiens, Allergan</b> 
+
+
+
+                        </td>
+                    </tr>
+                
+    <tr>
+        <td colspan="3">&nbsp;</td>
+    </tr>
+    <tr>
+        <td colspan="3" style="border-top:1px solid #cccccc;">&nbsp;</td>
+    </tr>
+</tbody></table>
+
+<table width="100%" bgcolor="white" cellspacing="4" cellpadding="0">
+    <tbody><tr>
+        <td style="width: 10%;">
+                    
+                        <input type="button" value="Add to My Program" class="AddSession" id="218199" name="218199">
+                        <br>
+                    
+                        <a href="https://www.amstat.org/EventDetail?Eventkey=JSM2019" target="_blank" class=""><img src="./jsm2019-pd_files/register_btn.gif" alt="Register"></a>
+                
+            <a href="https://ww2.amstat.org/meetings/jsm/2019/onlineprogram/ActivityDetails.cfm?SessionID=218199" title="218199" class="">
+            CE_12C 
+            </a>
+        </td>
+        <td>
+            <b> Sun, 7/28/2019,
+                1:00 PM -
+                5:00 PM </b>
+        </td>
+        <td>
+            
+            <b>CC-406</b>
+        </td>
+    </tr>
+    <tr>
+        <td colspan="3">
+            <b>Functional Data Analysis for Wearables: Methods and Applications (ADDED FEE) — Professional Development Continuing Education Course</b>
+        </td>
+    </tr>
+    <tr>
+        <td colspan="3">
+            <b>ASA</b>, Biometrics Section 
+        </td>
+    </tr>
+    
+    <tr>
+        <td colspan="3">
+            <em>Instructor(s): Vadim  Zipunnikov, Johns Hopkins University; Jeff  Goldsmith, Columbia University</em>
+        </td>
+    </tr>
+    
+            <tr>
+                <td colspan="3">
+                    Technological advances have made many wearable devices available for use in large epidemiological cohorts, national biobanks, and clinical studies. This opens up a tremendous opportunity for clinical and public health researchers to unveil previously hidden but pivotal physiological and behavioral signatures and relate them to disability and disease. Therefore, understanding, interpreta- tion and analysis of complex multimodal and multilevel data produced by such devices becomes crucial.
+The main goal of this workshop is to present an overview of the functional data analysis methods for modeling physical activity data, review their strengths and limitations, and demonstrate their implementation in R packages refund and mgcv. We will also examine several non-functional approaches for extracting informative and interpretable features from wearable data. We will discuss applications in epidemiological studies such as Head Start Program and National Health and Nutrition Examination Survey and a clinical study of Congestive Heart Failure.
+
+                </td>
+            </tr>
+        
+                    <tr>
+                        <td valign="top" align="right">
+
+                            1:00 PM 
+                        </td>
+                        <td colspan="2">
+                            <a href="https://ww2.amstat.org/meetings/jsm/2019/onlineprogram/AbstractDetails.cfm?abstractid=308039" class="">Functional Data Analysis for Wearables: Methods and Applications (ADDED FEE)</a>
+                            
+                            <br>
+
+                            <b>Jeff  Goldsmith, Columbia University</b>; <b>Vadim  Zipunnikov, Johns Hopkins University</b> 
+
+
+
+                        </td>
+                    </tr>
+                
+    <tr>
+        <td colspan="3">&nbsp;</td>
+    </tr>
+    <tr>
+        <td colspan="3" style="border-top:1px solid #cccccc;">&nbsp;</td>
+    </tr>
+</tbody></table>
+
+<table width="100%" bgcolor="white" cellspacing="4" cellpadding="0">
+    <tbody><tr>
+        <td style="width: 10%;">
+                    
+                        <input type="button" value="Add to My Program" class="AddSession" id="218787" name="218787">
+                        <br>
+                    
+                        <a href="https://www.amstat.org/EventDetail?Eventkey=JSM2019" target="_blank" class=""><img src="./jsm2019-pd_files/register_btn.gif" alt="Register"></a>
+                
+            <a href="https://ww2.amstat.org/meetings/jsm/2019/onlineprogram/ActivityDetails.cfm?SessionID=218787" title="218787" class="">
+            CE_43P 
+            </a>
+        </td>
+        <td>
+            <b> Sun, 7/28/2019,
+                1:00 PM -
+                5:00 PM </b>
+        </td>
+        <td>
+            
+            <b>CC-304</b>
+        </td>
+    </tr>
+    <tr>
+        <td colspan="3">
+            <b>Preparing Statisticians and Data Scientists for Leadership: How to See the Big Picture and Have More Influence (ADDED FEE) — Professional Development Personal Skills Development</b>
+        </td>
+    </tr>
+    <tr>
+        <td colspan="3">
+            <b>ASA</b> 
+        </td>
+    </tr>
+    
+    <tr>
+        <td colspan="3">
+            <em>Instructor(s): Gary  Sullivan; Fang  Chen, SAS Institute Inc</em>
+        </td>
+    </tr>
+    
+            <tr>
+                <td colspan="3">
+                    What is leadership? Much has been written and discussed within the statistics profession in the last few years on the topic and its importance in advancing our profession. This course provides an understanding of leadership and how statisticians can improve and demonstrate leadership to affect their organizations. It features leaders from all sectors of statistics speaking about their personal journeys and provides guidance on personal leadership development with a focus on the larger organizational/business view and influence. Course participants work with their colleagues to discuss and resolve leadership situations that statisticians face. Participants will come away with a plan for developing their own leadership and connect with a network of statisticians who can help them move forward on their leadership journey.Guest speakers include Jennifer Parker, Centers for Disease Control, and Bill Wang, Merck and Company, who will share their leadership journeys as well as insights and guidance on leadership development.
+                </td>
+            </tr>
+        
+                    <tr>
+                        <td valign="top" align="right">
+
+                            1:00 PM 
+                        </td>
+                        <td colspan="2">
+                            <a href="https://ww2.amstat.org/meetings/jsm/2019/onlineprogram/AbstractDetails.cfm?abstractid=308072" class="">Preparing Statisticians and Data Scientists for Leadership: How to See the Big Picture and Have More Influence (ADDED FEE)</a>
+                            
+                            <br>
+
+                            <b>Fang  Chen, SAS Institute Inc</b>; <b>Gary  Sullivan</b> 
+
+
+
+                        </td>
+                    </tr>
+                
+    <tr>
+        <td colspan="3">&nbsp;</td>
+    </tr>
+    <tr>
+        <td colspan="3" style="border-top:1px solid #cccccc;">&nbsp;</td>
+    </tr>
+</tbody></table>
+
+<table width="100%" bgcolor="white" cellspacing="4" cellpadding="0">
+    <tbody><tr>
+        <td style="width: 10%;">
+                    
+                        <input type="button" value="Add to My Program" class="AddSession" id="218789" name="218789">
+                        <br>
+                    
+            <a href="https://ww2.amstat.org/meetings/jsm/2019/onlineprogram/ActivityDetails.cfm?SessionID=218789" title="218789" class="">
+            CE_45P 
+            </a>
+        </td>
+        <td>
+            <b> Sun, 7/28/2019,
+                2:00 PM -
+                4:00 PM </b>
+        </td>
+        <td>
+            
+            <b>CC-202</b>
+        </td>
+    </tr>
+    <tr>
+        <td colspan="3">
+            <b>Career Development Panel: Networking Like a Pro: a Guided Networking Session (FREE - NO REGISTRATION REQUIRED) — Professional Development Personal Skills Development</b>
+        </td>
+    </tr>
+    <tr>
+        <td colspan="3">
+            <b>ASA</b>, Committee on Career Development 
+        </td>
+    </tr>
+    
+    <tr>
+        <td colspan="3">
+            <em>Organizer(s): Claire McKay  Bowen, Los Alamos National Laboratory</em>
+        </td>
+    </tr>
+    
+            <tr>
+                <td colspan="3">
+                    ASA Committee on Career Development (ASA CCD) is hosting a guided networking social for students and early career statisticians to practice in a friendly environment. We will have “pro networker” discusses various topics such as introducing yourself confidently followed by practice time. During the practice sessions, students and early career professionals will be forced to “rotate” to meet and practice with new people (volunteers from industry, government, and academia).
+                </td>
+            </tr>
+        
+                    <tr>
+                        <td valign="top" align="right">
+
+                            2:00 PM 
+                        </td>
+                        <td colspan="2">
+                            <a href="https://ww2.amstat.org/meetings/jsm/2019/onlineprogram/AbstractDetails.cfm?abstractid=308074" class="">Career Development Panel: Networking Like a Pro: a Guided Networking Session (FREE - NO REGISTRATION REQUIRED)</a>
+                            
+                            <br>
+
+                            <b>Claire McKay  Bowen, Los Alamos National Laboratory</b> 
+
+
+
+                        </td>
+                    </tr>
+                
+    <tr>
+        <td colspan="3">&nbsp;</td>
+    </tr>
+    <tr>
+        <td colspan="3" style="border-top:1px solid #cccccc;">&nbsp;</td>
+    </tr>
+</tbody></table>
+
+<table width="100%" bgcolor="white" cellspacing="4" cellpadding="0">
+    <tbody><tr>
+        <td style="width: 10%;">
+                    
+                        <input type="button" value="Add to My Program" class="AddSession" id="217908" name="217908">
+                        <br>
+                    
+                        <a href="https://www.amstat.org/EventDetail?Eventkey=JSM2019" target="_blank" class=""><img src="./jsm2019-pd_files/register_btn.gif" alt="Register"></a>
+                
+            <a href="https://ww2.amstat.org/meetings/jsm/2019/onlineprogram/ActivityDetails.cfm?SessionID=217908" title="217908" class="">
+            CE_13C 
+            </a>
+        </td>
+        <td>
+            <b> Mon, 7/29/2019,
+                8:00 AM -
+                12:00 PM </b>
+        </td>
+        <td>
+            
+            <b>CC-405</b>
+        </td>
+    </tr>
+    <tr>
+        <td colspan="3">
+            <b>Artificial Intelligence in Drug Development: Analyzing Electronic Medical Records Using Deep Learning (ADDED FEE) — Professional Development Continuing Education Course</b>
+        </td>
+    </tr>
+    <tr>
+        <td colspan="3">
+            <b>ASA</b> 
+        </td>
+    </tr>
+    
+    <tr>
+        <td colspan="3">
+            <em>Instructor(s): Qi  Tang, Sanofi</em>
+        </td>
+    </tr>
+    
+            <tr>
+                <td colspan="3">
+                    Believe or not, we are in the era of the fourth industrial revolution. It is critical for statisticians to understand or even master the center piece of this revolution, artificial intelligence (AI). Google, Amazon, Facebook, IBM and many other companies have broken new ground in AI including self-driving cars, cashier-free convenience stores, smarter hospital care, personal assistants and precision medicine.  In the short course, I will first introduce the concept of AI, review breakthroughs of AI in drug development including drug discovery, patient recruitment, patient compliance and prediction of patient and clinical trial outcomes.  Then, I will give a tutorial on deep learning methods, a set of novel tools for generating artificial intelligence, which were developed based on a class of almost forgotten old algorithms, neural networks that revived to become a mainstream in big data analytics thanks to advancement of big data and computer processing power. After that, I will illustrate the utility of deep learning in analyzing electronic medical records to predict patient and clinical trial outcomes for clinical trial optimization. Lastly, I will give an overview on Python, a commonly used software for deep learning, and the very necessary computing environment, cloud. 
+                </td>
+            </tr>
+        
+                    <tr>
+                        <td valign="top" align="right">
+
+                            8:00 AM 
+                        </td>
+                        <td colspan="2">
+                            <a href="https://ww2.amstat.org/meetings/jsm/2019/onlineprogram/AbstractDetails.cfm?abstractid=308040" class="">Artificial Intelligence in Drug Development: Analyzing Electronic Medical Records Using Deep Learning (ADDED FEE)</a>
+                            
+                            <br>
+
+                            <b>Qi  Tang, Sanofi</b> 
+
+
+
+                        </td>
+                    </tr>
+                
+    <tr>
+        <td colspan="3">&nbsp;</td>
+    </tr>
+    <tr>
+        <td colspan="3" style="border-top:1px solid #cccccc;">&nbsp;</td>
+    </tr>
+</tbody></table>
+
+<table width="100%" bgcolor="white" cellspacing="4" cellpadding="0">
+    <tbody><tr>
+        <td style="width: 10%;">
+                    
+                        <input type="button" value="Add to My Program" class="AddSession" id="216867" name="216867">
+                        <br>
+                    
+                        <a href="https://www.amstat.org/EventDetail?Eventkey=JSM2019" target="_blank" class=""><img src="./jsm2019-pd_files/register_btn.gif" alt="Register"></a>
+                
+            <a href="https://ww2.amstat.org/meetings/jsm/2019/onlineprogram/ActivityDetails.cfm?SessionID=216867" title="216867" class="">
+            CE_14C 
+            </a>
+        </td>
+        <td>
+            <b> Mon, 7/29/2019,
+                8:30 AM -
+                5:00 PM </b>
+        </td>
+        <td>
+            
+            <b>CC-401/402</b>
+        </td>
+    </tr>
+    <tr>
+        <td colspan="3">
+            <b>Bayesian Time Series Analysis and Forecasting (ADDED FEE) — Professional Development Continuing Education Course</b>
+        </td>
+    </tr>
+    <tr>
+        <td colspan="3">
+            <b>ASA</b>, Section on Bayesian Statistical Science 
+        </td>
+    </tr>
+    
+    <tr>
+        <td colspan="3">
+            <em>Instructor(s): Raquel  Prado, UC Santa Cruz-Baskin School of Engineering; Marco  Ferreira, Virginia Tech; Mike  West, Duke University</em>
+        </td>
+    </tr>
+    
+            <tr>
+                <td colspan="3">
+                    This short-course covers basic principles and methods of Bayesian dynamic modeling in time series analysis and forecasting, with methodological details of central model classes explored in a range of examples. A main focus is on dynamic linear models— structure, inference, forecasting— including stationary and non-stationary time series and volatility modelling. Following detailed coverage and examples of univariate time series analysis, the course extends to linked systems of univariate series defining specific classes of multivariate models, and goes further in multivariate contexts with dynamic factor models.  Aspects of simulation-based computation—forward simulation for forecasting, forward-backward simulation for analysis of state-space models, and MCMC methods for models with parameters and latent states going beyond the linear/Gaussian framework—are included. The course draws on a range of examples from business, finance, signal processing, environmental sciences, and the biomedical sciences.
+                </td>
+            </tr>
+        
+                    <tr>
+                        <td valign="top" align="right">
+
+                            8:30 AM 
+                        </td>
+                        <td colspan="2">
+                            <a href="https://ww2.amstat.org/meetings/jsm/2019/onlineprogram/AbstractDetails.cfm?abstractid=308042" class="">Bayesian Time Series Analysis and Forecasting (ADDED FEE)</a>
+                            
+                            <br>
+
+                            <b>Marco  Ferreira, Virginia Tech</b>; <b>Raquel  Prado, UC Santa Cruz-Baskin School of Engineering</b> 
+
+
+
+                        </td>
+                    </tr>
+                
+    <tr>
+        <td colspan="3">&nbsp;</td>
+    </tr>
+    <tr>
+        <td colspan="3" style="border-top:1px solid #cccccc;">&nbsp;</td>
+    </tr>
+</tbody></table>
+
+<table width="100%" bgcolor="white" cellspacing="4" cellpadding="0">
+    <tbody><tr>
+        <td style="width: 10%;">
+                    
+                        <input type="button" value="Add to My Program" class="AddSession" id="217992" name="217992">
+                        <br>
+                    
+                        <a href="https://www.amstat.org/EventDetail?Eventkey=JSM2019" target="_blank" class=""><img src="./jsm2019-pd_files/register_btn.gif" alt="Register"></a>
+                
+            <a href="https://ww2.amstat.org/meetings/jsm/2019/onlineprogram/ActivityDetails.cfm?SessionID=217992" title="217992" class="">
+            CE_15C 
+            </a>
+        </td>
+        <td>
+            <b> Mon, 7/29/2019,
+                8:30 AM -
+                5:00 PM </b>
+        </td>
+        <td>
+            
+            <b>CC-403/404</b>
+        </td>
+    </tr>
+    <tr>
+        <td colspan="3">
+            <b>Analysis of Clinical Trials: Theory and Applications (ADDED FEE) — Professional Development Continuing Education Course</b>
+        </td>
+    </tr>
+    <tr>
+        <td colspan="3">
+            <b>ASA</b>, Biopharmaceutical Section 
+        </td>
+    </tr>
+    
+    <tr>
+        <td colspan="3">
+            <em>Instructor(s): Devan  Mehrotra, Merck &amp; Co., Inc; Alex  Dmitrienko, Mediana Inc; Jeff  Maca, Bayer Pharmaceuticals</em>
+        </td>
+    </tr>
+    
+            <tr>
+                <td colspan="3">
+                    The course covers seven important topics that commonly face statisticians and research scientists conducting clinical research: stratified trials, longitudinal trials with dropouts, time-to-event trials with small sample sizes, crossover trials, pharmacogenomics studies for personalized medicine, multiple comparisons, and interim decision making with adaptive designs.     
+
+The course offers a well-balanced mix of theory and applications. It presents practical advice from experts and discusses regulatory considerations.  The discussed statistical methods will be implemented using SAS and R software. Clinical trial examples will be used to illustrate the statistical methods.
+
+The course is designed for statisticians working in the pharmaceutical or biotechnology industries as well as contract research organizations.  It is equally beneficial to statisticians working in institutions that deliver health care, government branches that conduct health-care related research and academics interested in learning about contemporary statistical topics in clinical drug development.  The attendees are required to have a basic knowledge of clinical trials.  Familiarity with drug development is highly desirable, but not necessary.
+
+This course was taught at JSM 2005-2018 and received the Excellence in Continuing Education Award in 2005.
+
+                </td>
+            </tr>
+        
+                    <tr>
+                        <td valign="top" align="right">
+
+                            8:30 AM 
+                        </td>
+                        <td colspan="2">
+                            <a href="https://ww2.amstat.org/meetings/jsm/2019/onlineprogram/AbstractDetails.cfm?abstractid=308041" class="">Analysis of Clinical Trials: Theory and Applications (ADDED FEE)</a>
+                            
+                            <br>
+
+                            <b>Alex  Dmitrienko, Mediana Inc</b>; <b>Devan  Mehrotra, Merck &amp; Co., Inc</b>; <b>Jeff  Maca, Bayer Pharmaceuticals</b> 
+
+
+
+                        </td>
+                    </tr>
+                
+    <tr>
+        <td colspan="3">&nbsp;</td>
+    </tr>
+    <tr>
+        <td colspan="3" style="border-top:1px solid #cccccc;">&nbsp;</td>
+    </tr>
+</tbody></table>
+
+<table width="100%" bgcolor="white" cellspacing="4" cellpadding="0">
+    <tbody><tr>
+        <td style="width: 10%;">
+                    
+                        <input type="button" value="Add to My Program" class="AddSession" id="218192" name="218192">
+                        <br>
+                    
+                        <a href="https://www.amstat.org/EventDetail?Eventkey=JSM2019" target="_blank" class=""><img src="./jsm2019-pd_files/register_btn.gif" alt="Register"></a>
+                
+            <a href="https://ww2.amstat.org/meetings/jsm/2019/onlineprogram/ActivityDetails.cfm?SessionID=218192" title="218192" class="">
+            CE_16C 
+            </a>
+        </td>
+        <td>
+            <b> Mon, 7/29/2019,
+                8:30 AM -
+                5:00 PM </b>
+        </td>
+        <td>
+            
+            <b>CC-407</b>
+        </td>
+    </tr>
+    <tr>
+        <td colspan="3">
+            <b>A First Step into Deep Learning for Computer Vision (ADDED FEE) — Professional Development Continuing Education Course</b>
+        </td>
+    </tr>
+    <tr>
+        <td colspan="3">
+            <b>ASA</b>, Section on Statistical Learning and Data Science 
+        </td>
+    </tr>
+    
+    <tr>
+        <td colspan="3">
+            <em>Instructor(s): Robert  Blanchard, SAS; Brett  Wujek, SAS Institute Inc.; Sarah  Kalicin, Intel Corporation</em>
+        </td>
+    </tr>
+    
+            <tr>
+                <td colspan="3">
+                    At the heart of the artificial intelligence revolution is the significant advancement in deep learning technology. Deep learning – more directly, the application of complex, sophisticated deep neural network architectures – has shown impressive promise in solving problems that were previously considered infeasible to solve. In particular, image classification and object detection have become extremely accurate, and the ability to understand, process and generate natural language from speech and text has provided a whole new level of interaction of humans with computers and devices. In this workshop you will learn the fundamentals of deep learning from the ground up, and hands-on exercises with deep learning software, using SAS Viya, will have you building and applying convolutional neural networks for image classification.  Students should have some familiarity with SAS, R, and/or Python and predictive modeling techniques.
+                </td>
+            </tr>
+        
+                    <tr>
+                        <td valign="top" align="right">
+
+                            8:30 AM 
+                        </td>
+                        <td colspan="2">
+                            <a href="https://ww2.amstat.org/meetings/jsm/2019/onlineprogram/AbstractDetails.cfm?abstractid=308043" class="">A First Step into Deep Learning for Computer Vision (ADDED FEE)</a>
+                            
+                            <br>
+
+                            <b>Brett  Wujek, SAS Institute Inc.</b>; <b>Robert  Blanchard, SAS</b>; <b>Sarah  Kalicin, Intel Corporation</b> 
+
+
+
+                        </td>
+                    </tr>
+                
+    <tr>
+        <td colspan="3">&nbsp;</td>
+    </tr>
+    <tr>
+        <td colspan="3" style="border-top:1px solid #cccccc;">&nbsp;</td>
+    </tr>
+</tbody></table>
+
+<table width="100%" bgcolor="white" cellspacing="4" cellpadding="0">
+    <tbody><tr>
+        <td style="width: 10%;">
+                    
+                        <input type="button" value="Add to My Program" class="AddSession" id="218204" name="218204">
+                        <br>
+                    
+                        <a href="https://www.amstat.org/EventDetail?Eventkey=JSM2019" target="_blank" class=""><img src="./jsm2019-pd_files/register_btn.gif" alt="Register"></a>
+                
+            <a href="https://ww2.amstat.org/meetings/jsm/2019/onlineprogram/ActivityDetails.cfm?SessionID=218204" title="218204" class="">
+            CE_17C 
+            </a>
+        </td>
+        <td>
+            <b> Mon, 7/29/2019,
+                8:30 AM -
+                5:00 PM </b>
+        </td>
+        <td>
+            
+            <b>CC-406</b>
+        </td>
+    </tr>
+    <tr>
+        <td colspan="3">
+            <b>Essential Bayes: Paradigm, Techniques, and Applications (ADDED FEE) — Professional Development Continuing Education Course</b>
+        </td>
+    </tr>
+    <tr>
+        <td colspan="3">
+            <b>ASA</b>, Section for Statistical Programmers and Analysts 
+        </td>
+    </tr>
+    
+    <tr>
+        <td colspan="3">
+            <em>Instructor(s): Fang  Chen, SAS Institute Inc; Amy  Shi, SAS Institute Inc</em>
+        </td>
+    </tr>
+    
+            <tr>
+                <td colspan="3">
+                    This course reviews the fundamentals of Bayesian methods (prior distributions, inferences, multilevel modeling, and so on), introduces computational techniques (algorithms, convergence, and so on), and emphasizes the practical aspect of performing Bayesian analysis. It introduces the Bayesian treatment of various statistical topics, including regression models, multilevel hierarchical models, missing data analysis, model assessment, and predictions. Other commonly used Bayesian techniques, such as Monte Carlo simulation and use of historical information, are also presented. These techniques and Bayesian applications are illustrated through examples. SAS® software is used for analyses, including the MCMC procedure for general modeling and the specialized BGLIMM procedure for Bayesian generalized mixed models.
+
+Attendees should have a background equivalent to an M.S. in applied statistics. Previous exposure to Bayesian methods and SAS software is useful. Familiarity with material at the level of the textbook Probability and Statistics, by DeGroot and Schervish (Addison Wesley), is appropriate.
+
+                </td>
+            </tr>
+        
+                    <tr>
+                        <td valign="top" align="right">
+
+                            8:30 AM 
+                        </td>
+                        <td colspan="2">
+                            <a href="https://ww2.amstat.org/meetings/jsm/2019/onlineprogram/AbstractDetails.cfm?abstractid=308044" class="">Essential Bayes: Paradigm, Techniques, and Applications (ADDED FEE)</a>
+                            
+                            <br>
+
+                            <b>Amy  Shi, SAS Institute Inc</b>; <b>Fang  Chen, SAS Institute Inc</b> 
+
+
+
+                        </td>
+                    </tr>
+                
+    <tr>
+        <td colspan="3">&nbsp;</td>
+    </tr>
+    <tr>
+        <td colspan="3" style="border-top:1px solid #cccccc;">&nbsp;</td>
+    </tr>
+</tbody></table>
+
+<table width="100%" bgcolor="white" cellspacing="4" cellpadding="0">
+    <tbody><tr>
+        <td style="width: 10%;">
+                    
+                        <input type="button" value="Add to My Program" class="AddSession" id="218739" name="218739">
+                        <br>
+                    
+                        <a href="https://www.amstat.org/EventDetail?Eventkey=JSM2019" target="_blank" class=""><img src="./jsm2019-pd_files/register_btn.gif" alt="Register"></a>
+                
+            <a href="https://ww2.amstat.org/meetings/jsm/2019/onlineprogram/ActivityDetails.cfm?SessionID=218739" title="218739" class="">
+            CE_18C 
+            </a>
+        </td>
+        <td>
+            <b> Mon, 7/29/2019,
+                8:30 AM -
+                5:00 PM </b>
+        </td>
+        <td>
+            
+            <b>CC-303</b>
+        </td>
+    </tr>
+    <tr>
+        <td colspan="3">
+            <b>Categorical Data Analysis (ADDED FEE) — Professional Development Continuing Education Course</b>
+        </td>
+    </tr>
+    <tr>
+        <td colspan="3">
+            <b>ASA</b> 
+        </td>
+    </tr>
+    
+    <tr>
+        <td colspan="3">
+            <em>Instructor(s): Alan  Agresti, University of Florida; Bernhard  Klingenberg, Williams College</em>
+        </td>
+    </tr>
+    
+            <tr>
+                <td colspan="3">
+                    This short course surveys the most common methods for analyzing
+categorical data. The first part of the course focuses on contingency
+table analysis, logistic regression for binary data, logistic model
+building, and loglinear models.  The second part introduces logistic
+models for multi-category ordinal and nominal responses and for
+clustered data using generalized estimating equations (GEE) and random
+effects.  The presentation emphasizes interpretation rather than
+technical details, with examples including social surveys and
+randomized clinical trials. Examples show the use of R, with SAS and
+Stata code also given for some examples.
+                </td>
+            </tr>
+        
+                    <tr>
+                        <td valign="top" align="right">
+
+                            8:30 AM 
+                        </td>
+                        <td colspan="2">
+                            <a href="https://ww2.amstat.org/meetings/jsm/2019/onlineprogram/AbstractDetails.cfm?abstractid=308045" class="">Categorical Data Analysis (ADDED FEE)</a>
+                            
+                            <br>
+
+                            <b>Alan  Agresti, University of Florida</b>; <b>Bernhard  Klingenberg, Williams College</b> 
+
+
+
+                        </td>
+                    </tr>
+                
+    <tr>
+        <td colspan="3">&nbsp;</td>
+    </tr>
+    <tr>
+        <td colspan="3" style="border-top:1px solid #cccccc;">&nbsp;</td>
+    </tr>
+</tbody></table>
+
+<table width="100%" bgcolor="white" cellspacing="4" cellpadding="0">
+    <tbody><tr>
+        <td style="width: 10%;">
+                    
+                        <input type="button" value="Add to My Program" class="AddSession" id="218196" name="218196">
+                        <br>
+                    
+                        <a href="https://www.amstat.org/EventDetail?Eventkey=JSM2019" target="_blank" class=""><img src="./jsm2019-pd_files/register_btn.gif" alt="Register"></a>
+                
+            <a href="https://ww2.amstat.org/meetings/jsm/2019/onlineprogram/ActivityDetails.cfm?SessionID=218196" title="218196" class="">
+            CE_19C 
+            </a>
+        </td>
+        <td>
+            <b> Mon, 7/29/2019,
+                1:00 PM -
+                5:00 PM </b>
+        </td>
+        <td>
+            
+            <b>CC-405</b>
+        </td>
+    </tr>
+    <tr>
+        <td colspan="3">
+            <b>Futility Analyzes in Confirmatory Clinical Trials – Methods and Procedures (ADDED FEE) — Professional Development Continuing Education Course</b>
+        </td>
+    </tr>
+    <tr>
+        <td colspan="3">
+            <b>ASA</b>, Biopharmaceutical Section 
+        </td>
+    </tr>
+    
+    <tr>
+        <td colspan="3">
+            <em>Instructor(s): Satrajit  Roychoudhury, Pfizer Inc ; Paul  Gallo, Novartis Pharmaceutical</em>
+        </td>
+    </tr>
+    
+            <tr>
+                <td colspan="3">
+                    Futility analyses (FA) are increasingly utilized in clinical trials. FA generally involves interim evaluation of a trial’s primary hypothesis to determine if trial success or clinically meaningful effect seems unlikely. FA can improve resource efficiency by halting trials with ineffective intervention. They also offer ethical advantages by exposing fewer trial participants to ineffective and possibly toxic interventions, and public health advantages in that trial results may be conveyed to the medical community in a more timely fashion. 
+
+FA should be carefully planned during trial design phase, as there are important statistical and operational consequences. Concerns include the control of statistical error rates and the potential for operational bias resulting from interim evaluations. Challenging questions arise during trial design regarding how FA should be conducted, when futility should be assessed, role of Data Monitoring Committees and thresholds at which futility may be established. Non-constancy of effect size and other limitations of accruing interim data can raise further challenges. 
+
+In this course, we will describe current practices and recent advancement in methodological approaches of FA with case studies. We describe what FA are, why they are conducted, where and when they should be considered, and how they should be methodologically and operationally performed. 
+
+                </td>
+            </tr>
+        
+                    <tr>
+                        <td valign="top" align="right">
+
+                            1:00 PM 
+                        </td>
+                        <td colspan="2">
+                            <a href="https://ww2.amstat.org/meetings/jsm/2019/onlineprogram/AbstractDetails.cfm?abstractid=308046" class="">Futility Analyzes in Confirmatory Clinical Trials – Methods and Procedures (ADDED FEE)</a>
+                            
+                            <br>
+
+                            <b>Paul  Gallo, Novartis Pharmaceutical</b>; <b>Satrajit  Roychoudhury, Pfizer Inc </b> 
+
+
+
+                        </td>
+                    </tr>
+                
+    <tr>
+        <td colspan="3">&nbsp;</td>
+    </tr>
+    <tr>
+        <td colspan="3" style="border-top:1px solid #cccccc;">&nbsp;</td>
+    </tr>
+</tbody></table>
+
+<table width="100%" bgcolor="white" cellspacing="4" cellpadding="0">
+    <tbody><tr>
+        <td style="width: 10%;">
+                    
+                        <input type="button" value="Add to My Program" class="AddSession" id="218181" name="218181">
+                        <br>
+                    
+                        <a href="https://www.amstat.org/EventDetail?Eventkey=JSM2019" target="_blank" class=""><img src="./jsm2019-pd_files/register_btn.gif" alt="Register"></a>
+                
+            <a href="https://ww2.amstat.org/meetings/jsm/2019/onlineprogram/ActivityDetails.cfm?SessionID=218181" title="218181" class="">
+            CE_20C 
+            </a>
+        </td>
+        <td>
+            <b> Tue, 7/30/2019,
+                8:00 AM -
+                12:00 PM </b>
+        </td>
+        <td>
+            
+            <b>CC-406</b>
+        </td>
+    </tr>
+    <tr>
+        <td colspan="3">
+            <b>Making Sense of Noisy Data with Measurement Error Or/And Missing Observations (ADDED FEE) — Professional Development Continuing Education Course</b>
+        </td>
+    </tr>
+    <tr>
+        <td colspan="3">
+            <b>ASA</b> 
+        </td>
+    </tr>
+    
+    <tr>
+        <td colspan="3">
+            <em>Instructor(s): Grace  Yi, University of Waterloo</em>
+        </td>
+    </tr>
+    
+            <tr>
+                <td colspan="3">
+                    Technological advances associated with data acquisition are leading to the production of larger and more complex data sets. The increases in dimension and structural complexity have led to an urgent need for the development of novel and flexible modeling tools to facilitate rigorous and efficient analysis. A very important concern on analyzing such data is the quality and provenance of the data.  Typically, the challenges presented by noisy data with measurement error and missing observations are particularly intriguing, and  such data arise ubiquitously from various fields including health sciences,
+epidemiological studies, survey research, economics, and so on.
+
+
+Effects of measurement error or missing observations have been a long standing concern in data analysis and research on data with such features has attracted extensive attention  over the past few decades. It has been well documented that ignoring measurement error or missing data in statistical analyses may lead to erroneous or even misleading results. The effects of measurement error or missing data are,  however, complex and affected by various factors.
+
+The objective of this course is to lead the audience to visit these challenging but exciting areas. Specifically, the impact of measurement error and missing data will be demonstrated and different types of measurement error models and missing data mechanisms will be discussed. Typical inference strategies for handling measurement error and missing data will be described. The discussion will be illustrated with examples and applications.
+
+The prerequisite for taking this course is the  basic statistics knowledge such as the likelihood method.  Anticipated audience include graduate students, researchers, and analysts who are interested in having an overview of measurement error and missing data. 
+
+The course materials are partly based on a newly published monograph, "Yi, G. Y. (2017).  Statistical Analysis with Measurement Error or Misclassification: Strategy, Method and Application. Springer Science+Business Media LLC, New York."
+                </td>
+            </tr>
+        
+                    <tr>
+                        <td valign="top" align="right">
+
+                            8:00 AM 
+                        </td>
+                        <td colspan="2">
+                            <a href="https://ww2.amstat.org/meetings/jsm/2019/onlineprogram/AbstractDetails.cfm?abstractid=308047" class="">Making Sense of Noisy Data with Measurement Error Or/And Missing Observations (ADDED FEE)</a>
+                            
+                            <br>
+
+                            <b>Grace  Yi, University of Waterloo</b> 
+
+
+
+                        </td>
+                    </tr>
+                
+    <tr>
+        <td colspan="3">&nbsp;</td>
+    </tr>
+    <tr>
+        <td colspan="3" style="border-top:1px solid #cccccc;">&nbsp;</td>
+    </tr>
+</tbody></table>
+
+<table width="100%" bgcolor="white" cellspacing="4" cellpadding="0">
+    <tbody><tr>
+        <td style="width: 10%;">
+                    
+                        <input type="button" value="Add to My Program" class="AddSession" id="218185" name="218185">
+                        <br>
+                    
+                        <a href="https://www.amstat.org/EventDetail?Eventkey=JSM2019" target="_blank" class=""><img src="./jsm2019-pd_files/register_btn.gif" alt="Register"></a>
+                
+            <a href="https://ww2.amstat.org/meetings/jsm/2019/onlineprogram/ActivityDetails.cfm?SessionID=218185" title="218185" class="">
+            CE_21C 
+            </a>
+        </td>
+        <td>
+            <b> Tue, 7/30/2019,
+                8:00 AM -
+                12:00 PM </b>
+        </td>
+        <td>
+            
+            <b>CC-405</b>
+        </td>
+    </tr>
+    <tr>
+        <td colspan="3">
+            <b>Measuring the Impact of Nonignorable Missing Data (ADDED FEE) — Professional Development Continuing Education Course</b>
+        </td>
+    </tr>
+    <tr>
+        <td colspan="3">
+            <b>ASA</b>, Biometrics Section 
+        </td>
+    </tr>
+    
+    <tr>
+        <td colspan="3">
+            <em>Instructor(s): Daniel  Heitjan, Southern Methodist University; Hui  Xie, Simon Fraser University</em>
+        </td>
+    </tr>
+    
+            <tr>
+                <td colspan="3">
+                    The popular but typically unverifiable assumption of ignorability greatly simplifies analyses with incomplete data, both conceptually and computationally. We say that missingness is ignorable when the probability that an observation is missing depends only on fully observed information, and nonignorable when the probability that an observation is missing depends on the value of the observation, even after conditioning on available design variables and covariates. For example, in a clinical trial the data are plausibly nonignorably missing when the subjects who drop out are those for whom the drug is either ineffective or excessively toxic. The possibility that the missing observations in a study are the result of a nonignorable mechanism casts doubt on the validity of conclusions based on the assumption of ignorability. Unfortunately, it is generally impossible to robustly assess the validity of this assumption with just the data at hand.
+
+One way to address this problem is to conduct a local sensitivity analysis: Essentially, re-compute estimated parameters of interest under models that slightly violate the assumption of ignorability. If the parameters change only modestly under violation of the assumption, then it is safe to proceed with an ignorable model. If they change
+drastically, then a simple ignorable analysis is of questionable validity. 
+
+To conduct such a sensitivity analysis in a systematic and efficient way, we have developed a measure that we call the index of local sensitivity to nonignorability (ISNI), which evaluates the rate of change of parameter estimates in the neighborhood of an ignorable model. Computation of ISNI is straightforward and avoids the need to estimate a nonignorable model or to posit a specific magnitude of nonignorability. We have developed a suite of statistical methods for ISNI analysis, now implemented in an R package named isni.
+
+In this half-day short course we will describe these methods and train users to apply them to inform evaluations of the reliability of empirical findings when data are incomplete.
+                </td>
+            </tr>
+        
+                    <tr>
+                        <td valign="top" align="right">
+
+                            8:00 AM 
+                        </td>
+                        <td colspan="2">
+                            <a href="https://ww2.amstat.org/meetings/jsm/2019/onlineprogram/AbstractDetails.cfm?abstractid=308048" class="">Measuring the Impact of Nonignorable Missing Data (ADDED FEE)</a>
+                            
+                            <br>
+
+                            <b>Daniel  Heitjan, Southern Methodist University</b>; <b>Hui  Xie, Simon Fraser University</b> 
+
+
+
+                        </td>
+                    </tr>
+                
+    <tr>
+        <td colspan="3">&nbsp;</td>
+    </tr>
+    <tr>
+        <td colspan="3" style="border-top:1px solid #cccccc;">&nbsp;</td>
+    </tr>
+</tbody></table>
+
+<table width="100%" bgcolor="white" cellspacing="4" cellpadding="0">
+    <tbody><tr>
+        <td style="width: 10%;">
+                    
+                        <input type="button" value="Add to My Program" class="AddSession" id="218740" name="218740">
+                        <br>
+                    
+                        <a href="https://www.amstat.org/EventDetail?Eventkey=JSM2019" target="_blank" class=""><img src="./jsm2019-pd_files/register_btn.gif" alt="Register"></a>
+                
+            <a href="https://ww2.amstat.org/meetings/jsm/2019/onlineprogram/ActivityDetails.cfm?SessionID=218740" title="218740" class="">
+            CE_22C 
+            </a>
+        </td>
+        <td>
+            <b> Tue, 7/30/2019,
+                8:00 AM -
+                12:00 PM </b>
+        </td>
+        <td>
+            
+            <b>CC-303</b>
+        </td>
+    </tr>
+    <tr>
+        <td colspan="3">
+            <b>An Introduction to Differential Privacy (ADDED FEE) — Professional Development Continuing Education Course</b>
+        </td>
+    </tr>
+    <tr>
+        <td colspan="3">
+            <b>ASA</b> 
+        </td>
+    </tr>
+    
+    <tr>
+        <td colspan="3">
+            <em>Instructor(s): Robert  Ashmead, Ohio Colleges of Medicine Government Resource Center; Philip  Leclerc, US Census Bureau; William  Sexton, U.S. Census Bureau</em>
+        </td>
+    </tr>
+    
+            <tr>
+                <td colspan="3">
+                    Differential privacy is a relatively unfamiliar concept to many statisticians, but its use is growing in prominence due to adoption in both industry and government for collecting or publishing data while limiting privacy-loss/disclosure risk.  For example, the U.S. Census Bureau is planning to utilize differentially private methods for the release of data products from the 2020 Census.   Differential privacy is a mathematical property of noise-infusion disclosure-limitation systems which, if respected, allows quantification of the global increased risk to a person’s privacy due to the use of their data from all publications originating from a confidential source like the 2020 Census. Unlike historically prominent disclosure limitation systems, differentially private algorithms do not rely on keeping their methods, code or parameters secret for their privacy assurances, and so allow for the statistical community to rigorously incorporate the impact of differentially private noise into statistical inference. 
+
+The goal of this class is to introduce participants to the motivations, basic principles, interpretations, and analysis of differential privacy and differentially private methods.  The learning objectives are that participants are able to 1) understand the differences between differentially private and legacy methods; 2) explain and interpret differential privacy; 3) apply basic differentially private mechanisms to data; and 4) analyze data to which some common differentially private methods have been applied. Please see below for a proposed outline of the course.    
+
+We assume no prior knowledge of differential privacy or disclosure limitation methods in general.  Some background in mathematical statistics including Bayesian statistics will be helpful in order to understand the theory and interpretation of differential privacy.  We will utilize the R programming language to illustrate examples throughout the class, so it will be helpful if participants have at least a basic understanding of R or a similar language and, the day of the course, bring a laptop with a recent version of R (&gt;= version 3.1.2) installed on it.
+                </td>
+            </tr>
+        
+                    <tr>
+                        <td valign="top" align="right">
+
+                            8:00 AM 
+                        </td>
+                        <td colspan="2">
+                            <a href="https://ww2.amstat.org/meetings/jsm/2019/onlineprogram/AbstractDetails.cfm?abstractid=308049" class="">An Introduction to Differential Privacy (ADDED FEE)</a>
+                            
+                            <br>
+
+                            <b>Philip  Leclerc, US Census Bureau</b>; <b>Robert  Ashmead, Ohio Colleges of Medicine Government Resource Center</b>; <b>William  Sexton, U.S. Census Bureau</b> 
+
+
+
+                        </td>
+                    </tr>
+                
+    <tr>
+        <td colspan="3">&nbsp;</td>
+    </tr>
+    <tr>
+        <td colspan="3" style="border-top:1px solid #cccccc;">&nbsp;</td>
+    </tr>
+</tbody></table>
+
+<table width="100%" bgcolor="white" cellspacing="4" cellpadding="0">
+    <tbody><tr>
+        <td style="width: 10%;">
+                    
+                        <input type="button" value="Add to My Program" class="AddSession" id="216818" name="216818">
+                        <br>
+                    
+                        <a href="https://www.amstat.org/EventDetail?Eventkey=JSM2019" target="_blank" class=""><img src="./jsm2019-pd_files/register_btn.gif" alt="Register"></a>
+                
+            <a href="https://ww2.amstat.org/meetings/jsm/2019/onlineprogram/ActivityDetails.cfm?SessionID=216818" title="216818" class="">
+            CE_23C 
+            </a>
+        </td>
+        <td>
+            <b> Tue, 7/30/2019,
+                8:30 AM -
+                5:00 PM </b>
+        </td>
+        <td>
+            
+            <b>CC-401/402</b>
+        </td>
+    </tr>
+    <tr>
+        <td colspan="3">
+            <b>An Introduction to R for Non-Programmers (ADDED FEE) — Professional Development Continuing Education Course</b>
+        </td>
+    </tr>
+    <tr>
+        <td colspan="3">
+            <b>ASA</b> 
+        </td>
+    </tr>
+    
+    <tr>
+        <td colspan="3">
+            <em>Instructor(s): William  Lamberti, George Mason University</em>
+        </td>
+    </tr>
+    
+            <tr>
+                <td colspan="3">
+                    In this one day course, participants will be introduced to the basics of R. Basic data manipulation, cleaning, and data visualization will be discussed. Learning through examples will be greatly emphasized. Participants are highly encouraged to bring their laptops (Windows, Mac, or Linux are all acceptable) for the examples done during within the course. This course is designed for individuals who have little to no experience with object oriented programming. Familiarity with programming in tools such as SAS will be helpful, but is not required. It is assumed that the baseline familiarity with data analysis tools have been primarily through a graphical user interface such as Excel, Minitab, or SPSS.
+                </td>
+            </tr>
+        
+                    <tr>
+                        <td valign="top" align="right">
+
+                            8:30 AM 
+                        </td>
+                        <td colspan="2">
+                            <a href="https://ww2.amstat.org/meetings/jsm/2019/onlineprogram/AbstractDetails.cfm?abstractid=308051" class="">An Introduction to R for Non-Programmers (ADDED FEE)</a>
+                            
+                            <br>
+
+                            <b>William  Lamberti, George Mason University</b> 
+
+
+
+                        </td>
+                    </tr>
+                
+    <tr>
+        <td colspan="3">&nbsp;</td>
+    </tr>
+    <tr>
+        <td colspan="3" style="border-top:1px solid #cccccc;">&nbsp;</td>
+    </tr>
+</tbody></table>
+
+<table width="100%" bgcolor="white" cellspacing="4" cellpadding="0">
+    <tbody><tr>
+        <td style="width: 10%;">
+                    
+                        <input type="button" value="Add to My Program" class="AddSession" id="217957" name="217957">
+                        <br>
+                    
+                        <a href="https://www.amstat.org/EventDetail?Eventkey=JSM2019" target="_blank" class=""><img src="./jsm2019-pd_files/register_btn.gif" alt="Register"></a>
+                
+            <a href="https://ww2.amstat.org/meetings/jsm/2019/onlineprogram/ActivityDetails.cfm?SessionID=217957" title="217957" class="">
+            CE_24C 
+            </a>
+        </td>
+        <td>
+            <b> Tue, 7/30/2019,
+                8:30 AM -
+                5:00 PM </b>
+        </td>
+        <td>
+            
+            <b>CC-403/404</b>
+        </td>
+    </tr>
+    <tr>
+        <td colspan="3">
+            <b>An Introduction to the Joint Modeling of Longitudinal and Survival Data, with Applications in R (ADDED FEE) — Professional Development Continuing Education Course</b>
+        </td>
+    </tr>
+    <tr>
+        <td colspan="3">
+            <b>ASA</b>, Biometrics Section 
+        </td>
+    </tr>
+    
+    <tr>
+        <td colspan="3">
+            <em>Instructor(s): Dimitris  Rizopoulos, Erasmus University Medical Center</em>
+        </td>
+    </tr>
+    
+            <tr>
+                <td colspan="3">
+                    In follow-up studies, different types of outcomes are typically collected for each subject. These include longitudinally measured responses (e.g., biomarkers), and the time until an event of interest occurs (e.g., death, dropout). Often these outcomes are separately analyzed, but on many occasions, it is of scientific interest to study their association. This type of research question has given rise in the class of joint models for longitudinal and time-to-event data. These models constitute an attractive paradigm for the analysis of follow-up data that is mainly applicable in two settings: First, when focus is on a survival outcome, and we wish to account for the effect of endogenous time-dependent covariates measured with error, and second, when focus is on the longitudinal outcome and we wish to correct for non-random dropout.
+
+This full-day course is aimed at applied researchers and graduate students and will provide a comprehensive introduction to this modeling framework. We will explain when these models should be used in practice, which are the key assumptions behind them, and how they can be utilized to extract relevant information from the data. Emphasis is given on applications, and after the end of the course, participants will be able to define appropriate joint models to answer their questions of interest.
+
+*Necessary background for the course*: This course assumes knowledge of basic statistical concepts, such as standard statistical inference using maximum likelihood, and regression models. Also, basic knowledge of R would be beneficial but is not required. Participants are required to bring their laptop with the battery fully charged. Before the course instructions will be sent for installing the required software.
+                </td>
+            </tr>
+        
+                    <tr>
+                        <td valign="top" align="right">
+
+                            8:30 AM 
+                        </td>
+                        <td colspan="2">
+                            <a href="https://ww2.amstat.org/meetings/jsm/2019/onlineprogram/AbstractDetails.cfm?abstractid=308052" class="">An Introduction to the Joint Modeling of Longitudinal and Survival Data, with Applications in R (ADDED FEE)</a>
+                            
+                            <br>
+
+                            <b>Dimitris  Rizopoulos, Erasmus University Medical Center</b> 
+
+
+
+                        </td>
+                    </tr>
+                
+    <tr>
+        <td colspan="3">&nbsp;</td>
+    </tr>
+    <tr>
+        <td colspan="3" style="border-top:1px solid #cccccc;">&nbsp;</td>
+    </tr>
+</tbody></table>
+
+<table width="100%" bgcolor="white" cellspacing="4" cellpadding="0">
+    <tbody><tr>
+        <td style="width: 10%;">
+                    
+                        <input type="button" value="Add to My Program" class="AddSession" id="218213" name="218213">
+                        <br>
+                    
+                        <a href="https://www.amstat.org/EventDetail?Eventkey=JSM2019" target="_blank" class=""><img src="./jsm2019-pd_files/register_btn.gif" alt="Register"></a>
+                
+            <a href="https://ww2.amstat.org/meetings/jsm/2019/onlineprogram/ActivityDetails.cfm?SessionID=218213" title="218213" class="">
+            CE_25C 
+            </a>
+        </td>
+        <td>
+            <b> Tue, 7/30/2019,
+                8:30 AM -
+                5:00 PM </b>
+        </td>
+        <td>
+            
+            <b>CC-407</b>
+        </td>
+    </tr>
+    <tr>
+        <td colspan="3">
+            <b>Design and Analysis of Experiments That Incorporate Simulator Platforms (ADDED FEE) — Professional Development Continuing Education Course</b>
+        </td>
+    </tr>
+    <tr>
+        <td colspan="3">
+            <b>ASA</b>, Section on Physical and Engineering Sciences 
+        </td>
+    </tr>
+    
+    <tr>
+        <td colspan="3">
+            <em>Instructor(s): Thomas  Santner, The Ohio State University; Brian J. Williams, Los Alamos National Laboratory</em>
+        </td>
+    </tr>
+    
+            <tr>
+                <td colspan="3">
+                    Deterministic simulators (``simulators'') based on micro-level mathematical descriptions of the physics or biology of a system are in the forefront of innovations for studying many engineering, biomechanics, and biological systems.  This course will provide statistical tools to design and analyze experiments utilizing simulators so as to identify the important factors controlling a given system, to determine the manner in which the factors affect the system, and to optimize the system. The course describes methods for experiments using data from either a simulator-only study or combined data from a physical system and a simulator of the system. The course contains four sections.  The first three sections provide tools to design and analyze simulator-only studies; the last uses the material of the first three sections to perform Bayesian calibration analysis using physical/simulator data. The first section provides methods for prediction based on given training data.  The second section shows how to design computer experiments. The third section describes methods for conducting ``sensitivity analyses" to identify the influential inputs to a simulator.  The final section provides tools to conduct a Bayesian calibration analysis.  This course is based on the Second Edition of the book ``The Design and Analysis of Computer Experiments" by Santner, Williams, and Notz (Springer Verlag).
+                </td>
+            </tr>
+        
+                    <tr>
+                        <td valign="top" align="right">
+
+                            8:30 AM 
+                        </td>
+                        <td colspan="2">
+                            <a href="https://ww2.amstat.org/meetings/jsm/2019/onlineprogram/AbstractDetails.cfm?abstractid=308050" class="">Design and Analysis of Experiments That Incorporate Simulator Platforms (ADDED FEE)</a>
+                            
+                            <br>
+
+                            <b>Brian J. Williams, Los Alamos National Laboratory</b>; <b>Thomas  Santner, The Ohio State University</b> 
+
+
+
+                        </td>
+                    </tr>
+                
+    <tr>
+        <td colspan="3">&nbsp;</td>
+    </tr>
+    <tr>
+        <td colspan="3" style="border-top:1px solid #cccccc;">&nbsp;</td>
+    </tr>
+</tbody></table>
+
+<table width="100%" bgcolor="white" cellspacing="4" cellpadding="0">
+    <tbody><tr>
+        <td style="width: 10%;">
+                    
+                        <input type="button" value="Add to My Program" class="AddSession" id="218180" name="218180">
+                        <br>
+                    
+                        <a href="https://www.amstat.org/EventDetail?Eventkey=JSM2019" target="_blank" class=""><img src="./jsm2019-pd_files/register_btn.gif" alt="Register"></a>
+                
+            <a href="https://ww2.amstat.org/meetings/jsm/2019/onlineprogram/ActivityDetails.cfm?SessionID=218180" title="218180" class="">
+            CE_26C 
+            </a>
+        </td>
+        <td>
+            <b> Tue, 7/30/2019,
+                1:00 PM -
+                5:00 PM </b>
+        </td>
+        <td>
+            
+            <b>CC-406</b>
+        </td>
+    </tr>
+    <tr>
+        <td colspan="3">
+            <b>Adaptive Treatment Strategies: An Introduction to Statistical Approaches for Estimation (ADDED FEE) — Professional Development Continuing Education Course</b>
+        </td>
+    </tr>
+    <tr>
+        <td colspan="3">
+            <b>ASA</b>, Biometrics Section 
+        </td>
+    </tr>
+    
+    <tr>
+        <td colspan="3">
+            <em>Instructor(s): Erica  Moodie, McGill university</em>
+        </td>
+    </tr>
+    
+            <tr>
+                <td colspan="3">
+                    Evidence-based medicine relies on using data to provide recommendations for effective treatment decisions. However, in many settings, response is heterogeneous across patients. Patient response may also vary over time, and physicians are faced with the daunting task of making sequential therapeutic decisions having seen few patients with a given clinical history. 
+
+Adaptive treatment strategies (ATS) operationalize the sequential decision-making process in the precision medicine paradigm, offering statisticians principled estimation tools that can be used to incorporate patient’s characteristics into a clinical decision-making framework so as to adapt the type, dosage or timing of treatment according to patients’ evolving needs.
+
+This half-day course will provide an overview of precision medicine from the statistical perspective. We will begin with a discussion of relevant data sources. We will then turn our attention to estimation, and consider multiple approaches – and their relative strengths and weaknesses – to estimating tailored treatment rules in a one-stage setting. Next, we will consider the multi-stage setting and inferential challenges in this area. Relevant clinical examples will be discussed, as well available software tools. 
+
+
+                </td>
+            </tr>
+        
+                    <tr>
+                        <td valign="top" align="right">
+
+                            1:00 PM 
+                        </td>
+                        <td colspan="2">
+                            <a href="https://ww2.amstat.org/meetings/jsm/2019/onlineprogram/AbstractDetails.cfm?abstractid=308053" class="">Adaptive Treatment Strategies: An Introduction to Statistical Approaches for Estimation (ADDED FEE)</a>
+                            
+                            <br>
+
+                            <b>Erica  Moodie, McGill university</b> 
+
+
+
+                        </td>
+                    </tr>
+                
+    <tr>
+        <td colspan="3">&nbsp;</td>
+    </tr>
+    <tr>
+        <td colspan="3" style="border-top:1px solid #cccccc;">&nbsp;</td>
+    </tr>
+</tbody></table>
+
+<table width="100%" bgcolor="white" cellspacing="4" cellpadding="0">
+    <tbody><tr>
+        <td style="width: 10%;">
+                    
+                        <input type="button" value="Add to My Program" class="AddSession" id="218206" name="218206">
+                        <br>
+                    
+                        <a href="https://www.amstat.org/EventDetail?Eventkey=JSM2019" target="_blank" class=""><img src="./jsm2019-pd_files/register_btn.gif" alt="Register"></a>
+                
+            <a href="https://ww2.amstat.org/meetings/jsm/2019/onlineprogram/ActivityDetails.cfm?SessionID=218206" title="218206" class="">
+            CE_27C 
+            </a>
+        </td>
+        <td>
+            <b> Tue, 7/30/2019,
+                1:00 PM -
+                5:00 PM </b>
+        </td>
+        <td>
+            
+            <b>CC-405</b>
+        </td>
+    </tr>
+    <tr>
+        <td colspan="3">
+            <b>Causal Effect Estimation with Observational Data: Planning and Practice (ADDED FEE) — Professional Development Continuing Education Course</b>
+        </td>
+    </tr>
+    <tr>
+        <td colspan="3">
+            <b>ASA</b>, Section for Statistical Programmers and Analysts 
+        </td>
+    </tr>
+    
+    <tr>
+        <td colspan="3">
+            <em>Instructor(s): Michael  Lamm, SAS Institute Inc; Clay  Thompson, SAS Institute Inc</em>
+        </td>
+    </tr>
+    
+            <tr>
+                <td colspan="3">
+                    When does an effect estimate have a valid causal interpretation? Answering this question requires you to carefully evaluate if the estimation method used is appropriate given the data generating process. While these considerations are familiar when analyzing data from designed experiments, they are often ignored and can be much more challenging when analyzing observational data.  This course introduces commonly used methods for estimating dichotomous treatment effects from observational data and tools for evaluating the conditions under which the effect estimate has a valid causal interpretation. In particular, for the estimation of treatment effects this course discusses the use of propensity score matching, inverse probability weighting, and doubly robust methods. For the evaluation of if a causal interpretation is valid for an estimated effect, this course reviews the role of directed graphs as a tool to represent the data generating process, reason about sources of association and bias, and construct a valid estimation strategy. From planning to analysis, these tools provide a rigorous and comprehensive workflow for causal effect estimation from observational data or data with imperfect randomization. This course provides a brief review of the theory behind these estimation and graphical methods and focuses on illustrating their application with a number of examples using some relatively new procedures in SAS/STAT® software. No prior experience with these estimation and graphical methods is assumed.
+                </td>
+            </tr>
+        
+                    <tr>
+                        <td valign="top" align="right">
+
+                            1:00 PM 
+                        </td>
+                        <td colspan="2">
+                            <a href="https://ww2.amstat.org/meetings/jsm/2019/onlineprogram/AbstractDetails.cfm?abstractid=308054" class="">Causal Effect Estimation with Observational Data: Planning and Practice (ADDED FEE)</a>
+                            
+                            <br>
+
+                            <b>Clay  Thompson, SAS Institute Inc</b>; <b>Michael  Lamm, SAS Institute Inc</b> 
+
+
+
+                        </td>
+                    </tr>
+                
+    <tr>
+        <td colspan="3">&nbsp;</td>
+    </tr>
+    <tr>
+        <td colspan="3" style="border-top:1px solid #cccccc;">&nbsp;</td>
+    </tr>
+</tbody></table>
+
+<table width="100%" bgcolor="white" cellspacing="4" cellpadding="0">
+    <tbody><tr>
+        <td style="width: 10%;">
+                    
+                        <input type="button" value="Add to My Program" class="AddSession" id="218211" name="218211">
+                        <br>
+                    
+                        <a href="https://www.amstat.org/EventDetail?Eventkey=JSM2019" target="_blank" class=""><img src="./jsm2019-pd_files/register_btn.gif" alt="Register"></a>
+                
+            <a href="https://ww2.amstat.org/meetings/jsm/2019/onlineprogram/ActivityDetails.cfm?SessionID=218211" title="218211" class="">
+            CE_28C 
+            </a>
+        </td>
+        <td>
+            <b> Tue, 7/30/2019,
+                1:00 PM -
+                5:00 PM </b>
+        </td>
+        <td>
+            
+            <b>CC-303</b>
+        </td>
+    </tr>
+    <tr>
+        <td colspan="3">
+            <b>Understanding and Tackling Measurement Error: a Whistle Stop Tour of Modern Practical Methods (ADDED FEE) — Professional Development Continuing Education Course</b>
+        </td>
+    </tr>
+    <tr>
+        <td colspan="3">
+            <b>ASA</b>, Section on Statistics in Epidemiology 
+        </td>
+    </tr>
+    
+    <tr>
+        <td colspan="3">
+            <em>Instructor(s): Pamela  Shaw, University of Pennsylvania; Paul  Gustafson, University of British Columbia</em>
+        </td>
+    </tr>
+    
+            <tr>
+                <td colspan="3">
+                    Measurement error and misclassification of variables is frequently encountered in epidemiology and involve variables of considerable importance in public health such as dietary intakes, physical activity, smoking, and environmental pollutants. Further, the rising interest in research with electronic health records has brought new challenges and renewed interest in robust and practical methods to address error prone exposures and outcomes. If not handled properly, analyses of error-prone data can lead to biases associations of interest. This course discusses the issues raised by measurement error and practical approaches for analysis that mitigate its effects. Our aim is that participants gain the knowledge and confidence to understand the effects of measurement error and to apply techniques for measurement error correction in their own work. The emphasis will be on practical application and worked examples will be used throughout. Examples will be given using the R software.  
+The course will begin with a discussion of the effects of measurement error in regression analyses. Focus will then move to techniques for mitigating those effects via statistical analysis and study design. Several methods will be introduced, including regression calibration, simulation extrapolation (SIMEX), likelihood-based methods, and Bayesian methods. The primary focus will be on measurement error in explanatory covariates, but error in response variables will also be discussed. Issues arising from different types of error and study design will also be covered.
+The session will draw on the work of the STRengthening Analytical Thinking for Observational (STRATOS) Initiative’s measurement error topic group, which is led by Professor Laurence Freedman and Dr Victor Kipnis.
+
+                </td>
+            </tr>
+        
+                    <tr>
+                        <td valign="top" align="right">
+
+                            1:00 PM 
+                        </td>
+                        <td colspan="2">
+                            <a href="https://ww2.amstat.org/meetings/jsm/2019/onlineprogram/AbstractDetails.cfm?abstractid=308055" class="">Understanding and Tackling Measurement Error: a Whistle Stop Tour of Modern Practical Methods (ADDED FEE)</a>
+                            
+                            <br>
+
+                            <b>Pamela  Shaw, University of Pennsylvania</b>; <b>Paul  Gustafson, University of British Columbia</b> 
+
+
+
+                        </td>
+                    </tr>
+                
+    <tr>
+        <td colspan="3">&nbsp;</td>
+    </tr>
+    <tr>
+        <td colspan="3" style="border-top:1px solid #cccccc;">&nbsp;</td>
+    </tr>
+</tbody></table>
+
+<table width="100%" bgcolor="white" cellspacing="4" cellpadding="0">
+    <tbody><tr>
+        <td style="width: 10%;">
+                    
+                        <input type="button" value="Add to My Program" class="AddSession" id="218741" name="218741">
+                        <br>
+                    
+                        <a href="https://www.amstat.org/EventDetail?Eventkey=JSM2019" target="_blank" class=""><img src="./jsm2019-pd_files/register_btn.gif" alt="Register"></a>
+                
+            <a href="https://ww2.amstat.org/meetings/jsm/2019/onlineprogram/ActivityDetails.cfm?SessionID=218741" title="218741" class="">
+            CE_29T 
+            </a>
+        </td>
+        <td>
+            <b> Wed, 7/31/2019,
+                8:00 AM -
+                9:45 AM </b>
+        </td>
+        <td>
+            
+            <b>CC-405</b>
+        </td>
+    </tr>
+    <tr>
+        <td colspan="3">
+            <b>Visual Interaction, Statistical Analysis and Machine Learning to Advance Life Science Research with JMP Software (ADDED FEE) — Professional Development Computer Technology Workshop</b>
+        </td>
+    </tr>
+    <tr>
+        <td colspan="3">
+            <b>ASA</b>, JMP 
+        </td>
+    </tr>
+    
+    <tr>
+        <td colspan="3">
+            <em>Instructor(s): Kelci  Miclaus, SAS Institute/JMP Division; Ruth  Hummel, SAS Institute, JMP Division</em>
+        </td>
+    </tr>
+    
+            <tr>
+                <td colspan="3">
+                    The size and scope of biological data collection in life science applications continues to grow exponentially. Recent successes in biomarker discovery, precision medicine (notably oncology) and early clinical trial safety and efficacy detection, coupled with reductions in technology costs, have led to the generation of a wealth of biological information collected in increasingly complex experiments. Effective visualization, data exploration and manipulation are critical to assess applications of appropriate statistical methodologies. In this presentation we demonstrate using the JMP family of products (JMP, JMP Pro, JMP Genomics, and JMP Clinical) to establish pipelines for data quality assessment, exploratory statistical analysis and machine learning methods for end-to-end analysis with biological data. Using JMP products, we highlight the advantages of a visual, interactive interface to quickly assess large, complex data. Specific examples include: integrative genomic techniques, complex mixed models for longitudinal RNA-Seq analysis, feature engineering, model assessment and cross validation in machine learning, and clinical data science applications for oncology clinical trials. Effective communication and analysis reporting is also highlighted using new features to publish interactive web reports to JMP Public.
+                </td>
+            </tr>
+        
+                    <tr>
+                        <td valign="top" align="right">
+
+                            8:00 AM 
+                        </td>
+                        <td colspan="2">
+                            <a href="https://ww2.amstat.org/meetings/jsm/2019/onlineprogram/AbstractDetails.cfm?abstractid=308056" class="">Visual Interaction, Statistical Analysis and Machine Learning to Advance Life Science Research with JMP Software (ADDED FEE)</a>
+                            
+                            <br>
+
+                            <b>Kelci  Miclaus, SAS Institute/JMP Division</b>; <b>Ruth  Hummel, SAS Institute, JMP Division</b> 
+
+
+
+                        </td>
+                    </tr>
+                
+    <tr>
+        <td colspan="3">&nbsp;</td>
+    </tr>
+    <tr>
+        <td colspan="3" style="border-top:1px solid #cccccc;">&nbsp;</td>
+    </tr>
+</tbody></table>
+
+<table width="100%" bgcolor="white" cellspacing="4" cellpadding="0">
+    <tbody><tr>
+        <td style="width: 10%;">
+                    
+                        <input type="button" value="Add to My Program" class="AddSession" id="218742" name="218742">
+                        <br>
+                    
+                        <a href="https://www.amstat.org/EventDetail?Eventkey=JSM2019" target="_blank" class=""><img src="./jsm2019-pd_files/register_btn.gif" alt="Register"></a>
+                
+            <a href="https://ww2.amstat.org/meetings/jsm/2019/onlineprogram/ActivityDetails.cfm?SessionID=218742" title="218742" class="">
+            CE_30T 
+            </a>
+        </td>
+        <td>
+            <b> Wed, 7/31/2019,
+                8:00 AM -
+                9:45 AM </b>
+        </td>
+        <td>
+            
+            <b>CC-403/404</b>
+        </td>
+    </tr>
+    <tr>
+        <td colspan="3">
+            <b>Introducing the SAS BGLIMM Procedure for Bayesian Generalized Linear Mixed Models (ADDED FEE) — Professional Development Computer Technology Workshop</b>
+        </td>
+    </tr>
+    <tr>
+        <td colspan="3">
+            <b>ASA</b>, SAS 
+        </td>
+    </tr>
+    
+    <tr>
+        <td colspan="3">
+            <em>Instructor(s): Amy  Shi, SAS Institute Inc</em>
+        </td>
+    </tr>
+    
+            <tr>
+                <td colspan="3">
+                    SAS/STAT® 15.1 includes PROC BGLIMM, a new, high-performance, sampling-based procedure that provides full Bayesian inference for generalized linear mixed models (GLMMs). PROC BGLIMM models data from the exponential family distributions that have correlations or nonconstant variability; uses syntax similar to that of the MIXED and GLIMMIX procedures (the CLASS, MODEL, RANDOM, REPEATED, and ESTIMATE statements); deploys optimal sampling algorithms that are parallelized for performance; handles multilevel nested and non-nested random-effects models; and fits models to multivariate or longitudinal data with repeated measurements. PROC BGLIMM provides convenient access, with improved performance, to Bayesian analysis of complex mixed models that you could previously perform with the MCMC procedure. This workshop starts with a general discussion of Bayesian GLMM, then presents the important features of PROC BGLIMM, showing you how to use it for estimation, inference, and prediction.
+                </td>
+            </tr>
+        
+                    <tr>
+                        <td valign="top" align="right">
+
+                            8:00 AM 
+                        </td>
+                        <td colspan="2">
+                            <a href="https://ww2.amstat.org/meetings/jsm/2019/onlineprogram/AbstractDetails.cfm?abstractid=308057" class="">Introducing the SAS BGLIMM Procedure for Bayesian Generalized Linear Mixed Models (ADDED FEE)</a>
+                            
+                            <br>
+
+                            <b>Amy  Shi, SAS Institute Inc</b> 
+
+
+
+                        </td>
+                    </tr>
+                
+    <tr>
+        <td colspan="3">&nbsp;</td>
+    </tr>
+    <tr>
+        <td colspan="3" style="border-top:1px solid #cccccc;">&nbsp;</td>
+    </tr>
+</tbody></table>
+
+<table width="100%" bgcolor="white" cellspacing="4" cellpadding="0">
+    <tbody><tr>
+        <td style="width: 10%;">
+                    
+                        <input type="button" value="Add to My Program" class="AddSession" id="218743" name="218743">
+                        <br>
+                    
+                        <a href="https://www.amstat.org/EventDetail?Eventkey=JSM2019" target="_blank" class=""><img src="./jsm2019-pd_files/register_btn.gif" alt="Register"></a>
+                
+            <a href="https://ww2.amstat.org/meetings/jsm/2019/onlineprogram/ActivityDetails.cfm?SessionID=218743" title="218743" class="">
+            CE_31T 
+            </a>
+        </td>
+        <td>
+            <b> Wed, 7/31/2019,
+                8:00 AM -
+                9:45 AM </b>
+        </td>
+        <td>
+            
+            <b>CC-406</b>
+        </td>
+    </tr>
+    <tr>
+        <td colspan="3">
+            <b>Causal Inference and Treatment Effects Using Stata (ADDED FEE) — Professional Development Computer Technology Workshop</b>
+        </td>
+    </tr>
+    <tr>
+        <td colspan="3">
+            <b>ASA</b>, Stata 
+        </td>
+    </tr>
+    
+    <tr>
+        <td colspan="3">
+            <em>Instructor(s): Charles  Lindsey, StataCorp LLC</em>
+        </td>
+    </tr>
+    
+            <tr>
+                <td colspan="3">
+                    Researchers are often challenged with making causal inferences based on observational data instead of experimental data. In this workshop, we provide an overview of causal inference methods and demonstrate how to implement these methods in Stata. Causal inferences are often framed in terms of treatment effects---measurements of the difference in an outcome between a treatment and the control. Techniques for estimating treatment effects such as regression adjustment, inverse probability weighting, and propensity-score matching will be discussed. We will also introduce methods for estimating treatment effects when observational data complications such as sample selection (data missing not at random) and unobserved confounding are present. In addition, we will show how to estimate the effect of changing levels of a continuous predictor under these complications. A number of examples demonstrating how to perform causal inference and treatment-effect estimation within Stata will be provided. No prior knowledge of Stata is required, but basic familiarity with regression modeling will prove useful.
+                </td>
+            </tr>
+        
+                    <tr>
+                        <td valign="top" align="right">
+
+                            8:00 AM 
+                        </td>
+                        <td colspan="2">
+                            <a href="https://ww2.amstat.org/meetings/jsm/2019/onlineprogram/AbstractDetails.cfm?abstractid=308058" class="">Causal Inference and Treatment Effects Using Stata (ADDED FEE)</a>
+                            
+                            <br>
+
+                            <b>Charles  Lindsey, StataCorp LLC</b> 
+
+
+
+                        </td>
+                    </tr>
+                
+    <tr>
+        <td colspan="3">&nbsp;</td>
+    </tr>
+    <tr>
+        <td colspan="3" style="border-top:1px solid #cccccc;">&nbsp;</td>
+    </tr>
+</tbody></table>
+
+<table width="100%" bgcolor="white" cellspacing="4" cellpadding="0">
+    <tbody><tr>
+        <td style="width: 10%;">
+                    
+                        <input type="button" value="Add to My Program" class="AddSession" id="218744" name="218744">
+                        <br>
+                    
+                        <a href="https://www.amstat.org/EventDetail?Eventkey=JSM2019" target="_blank" class=""><img src="./jsm2019-pd_files/register_btn.gif" alt="Register"></a>
+                
+            <a href="https://ww2.amstat.org/meetings/jsm/2019/onlineprogram/ActivityDetails.cfm?SessionID=218744" title="218744" class="">
+            CE_32T 
+            </a>
+        </td>
+        <td>
+            <b> Wed, 7/31/2019,
+                8:00 AM -
+                9:45 AM </b>
+        </td>
+        <td>
+            
+            <b>CC-407</b>
+        </td>
+    </tr>
+    <tr>
+        <td colspan="3">
+            <b>Interfacing R with Microsoft Excel (ADDED FEE) — Professional Development Computer Technology Workshop</b>
+        </td>
+    </tr>
+    <tr>
+        <td colspan="3">
+            <b>ASA</b>, XLSTAT 
+        </td>
+    </tr>
+    
+    <tr>
+        <td colspan="3">
+            <em>Instructor(s): Jean Paul  Maalouf, XLSTAT; Efthalia  Anagnostou, XLSTAT</em>
+        </td>
+    </tr>
+    
+            <tr>
+                <td colspan="3">
+                    Thanks to its popularity and user-friendly environment, Microsoft Excel is widely used to gain data insights and make better decisions. On the other hand, R is a coding software known for its flexibility and data visualization capabilities. However, the latter is often associated with a steep learning curve. In order to interface the unlimited possibilities of R with the user-friendly environment of Excel, the statistical software XLSTAT offers you two powerful tools: 1) XLSTAT-R, which helps you develop user-friendly dialog boxes in Excel allowing the end-users to launch customized R procedures directly on data selected in Excel. 2)  The XLSTAT-RNotebook, which allows calling R code directly from the Excel spreadsheet where your data are stored.  This makes it possible to create complex dashboards or reports in Excel made from R code. The created procedures can then be used by colleagues, students or clients who don’t necessarily know how to code. This workshop shows a) how to make the pam{cluster} R function available in an Excel dialog box and b) how to develop a customized R-based dashboard in an Excel sheet. Basic coding skills are required (preferably R).
+                </td>
+            </tr>
+        
+                    <tr>
+                        <td valign="top" align="right">
+
+                            8:00 AM 
+                        </td>
+                        <td colspan="2">
+                            <a href="https://ww2.amstat.org/meetings/jsm/2019/onlineprogram/AbstractDetails.cfm?abstractid=308059" class="">Interfacing R with Microsoft Excel (ADDED FEE)</a>
+                            
+                            <br>
+
+                            <b>Efthalia  Anagnostou, XLSTAT</b>; <b>Jean Paul  Maalouf, XLSTAT</b> 
+
+
+
+                        </td>
+                    </tr>
+                
+    <tr>
+        <td colspan="3">&nbsp;</td>
+    </tr>
+    <tr>
+        <td colspan="3" style="border-top:1px solid #cccccc;">&nbsp;</td>
+    </tr>
+</tbody></table>
+
+<table width="100%" bgcolor="white" cellspacing="4" cellpadding="0">
+    <tbody><tr>
+        <td style="width: 10%;">
+                    
+                        <input type="button" value="Add to My Program" class="AddSession" id="218783" name="218783">
+                        <br>
+                    
+                        <a href="https://www.amstat.org/EventDetail?Eventkey=JSM2019" target="_blank" class=""><img src="./jsm2019-pd_files/register_btn.gif" alt="Register"></a>
+                
+            <a href="https://ww2.amstat.org/meetings/jsm/2019/onlineprogram/ActivityDetails.cfm?SessionID=218783" title="218783" class="">
+            CE_33T 
+            </a>
+        </td>
+        <td>
+            <b> Wed, 7/31/2019,
+                10:00 AM -
+                11:45 AM </b>
+        </td>
+        <td>
+            
+            <b>CC-405</b>
+        </td>
+    </tr>
+    <tr>
+        <td colspan="3">
+            <b>Flexible, Interactive (Generalized Regression) Modeling with JMP Pro (ADDED FEE) — Professional Development Computer Technology Workshop</b>
+        </td>
+    </tr>
+    <tr>
+        <td colspan="3">
+            <b>ASA</b>, JMP 
+        </td>
+    </tr>
+    
+    <tr>
+        <td colspan="3">
+            <em>Instructor(s): Ruth  Hummel, SAS Institute, JMP Division; Clay  Barker, JMP</em>
+        </td>
+    </tr>
+    
+            <tr>
+                <td colspan="3">
+                    Generalized Regression - it sounds scary, but it's not. And Generalized Regression in JMP Pro can handle most common linear modeling exercises, plus so much more. Need to find the best set of predictors in a sea of possibilities (i.e., variable selection)? This platform can do that. Need to model a categorical response with more than two levels? Generalized Regression can do that. Have problems with non-normal responses like count data or yield percentage? Where other modeling methods fall down with these responses, Generalized Regression handles them with aplomb. If you're not using this platform, you're missing out. We will look at using Genreg to build models in a variety of settings: starting with an orthogonal designed experiment and moving to large observational data sets with correlated predictors. We will explore traditional methods and then venture into cool extensions that are simple to accomplish using Generalized Regression in JMP Pro. You will learn about generalized regression as a conceptual topic and about how to implement these ideas in JMP Pro during this Workshop.
+                </td>
+            </tr>
+        
+                    <tr>
+                        <td valign="top" align="right">
+
+                            10:00 AM 
+                        </td>
+                        <td colspan="2">
+                            <a href="https://ww2.amstat.org/meetings/jsm/2019/onlineprogram/AbstractDetails.cfm?abstractid=308068" class="">Flexible, Interactive (Generalized Regression) Modeling with JMP Pro (ADDED FEE)</a>
+                            
+                            <br>
+
+                            <b>Clay  Barker, JMP</b>; <b>Ruth  Hummel, SAS Institute, JMP Division</b> 
+
+
+
+                        </td>
+                    </tr>
+                
+    <tr>
+        <td colspan="3">&nbsp;</td>
+    </tr>
+    <tr>
+        <td colspan="3" style="border-top:1px solid #cccccc;">&nbsp;</td>
+    </tr>
+</tbody></table>
+
+<table width="100%" bgcolor="white" cellspacing="4" cellpadding="0">
+    <tbody><tr>
+        <td style="width: 10%;">
+                    
+                        <input type="button" value="Add to My Program" class="AddSession" id="218746" name="218746">
+                        <br>
+                    
+                        <a href="https://www.amstat.org/EventDetail?Eventkey=JSM2019" target="_blank" class=""><img src="./jsm2019-pd_files/register_btn.gif" alt="Register"></a>
+                
+            <a href="https://ww2.amstat.org/meetings/jsm/2019/onlineprogram/ActivityDetails.cfm?SessionID=218746" title="218746" class="">
+            CE_34T 
+            </a>
+        </td>
+        <td>
+            <b> Wed, 7/31/2019,
+                10:00 AM -
+                11:45 AM </b>
+        </td>
+        <td>
+            
+            <b>CC-403/404</b>
+        </td>
+    </tr>
+    <tr>
+        <td colspan="3">
+            <b>Practical Causal Mediation Analysis with PROC CAUSALMED in SAS/STAT® (ADDED FEE) — Professional Development Computer Technology Workshop</b>
+        </td>
+    </tr>
+    <tr>
+        <td colspan="3">
+            <b>ASA</b>, SAS 
+        </td>
+    </tr>
+    
+    <tr>
+        <td colspan="3">
+            <em>Instructor(s): Yiu-Fai  Yung, SAS</em>
+        </td>
+    </tr>
+    
+            <tr>
+                <td colspan="3">
+                    Causal mediation analysis is concerned with statistical inference about the mechanisms of causal effects, especially for observational data in which confounding variables are present. For example, is a gene responsible for causing lung cancer directly or only through its influence on smoking behavior? Is a youth community program effective in reducing juvenile crime rates because of its intermediate effect on changing the moral values of youngsters? In causal mediation analysis, a treatment T is assumed to have a causal effect on an outcome Y through two causal pathways. One is a direct pathway, T-&gt;Y. Another is a mediated or indirect pathway, T-&gt;M-&gt;Y, where M is called a mediator variable. Causal mediation analysis quantifies the direct and mediated causal effects on Y and provides unbiased estimation of these effects. This talk introduces the CAUSALMED procedure, new in SAS/STAT 15.1, for estimating causal mediation effects by the regression approach. Under the counterfactual outcome framework, the talk defines various causal mediation effects and describes the assumptions of causal mediation analysis. Numerical examples are used to illustrate the applications of the CAUSALMED procedure and the interpretations of various causal mediation effects.
+                </td>
+            </tr>
+        
+                    <tr>
+                        <td valign="top" align="right">
+
+                            10:00 AM 
+                        </td>
+                        <td colspan="2">
+                            <a href="https://ww2.amstat.org/meetings/jsm/2019/onlineprogram/AbstractDetails.cfm?abstractid=308060" class="">Practical Causal Mediation Analysis with PROC CAUSALMED in SAS/STAT® (ADDED FEE)</a>
+                            
+                            <br>
+
+                            <b>Yiu-Fai  Yung, SAS</b> 
+
+
+
+                        </td>
+                    </tr>
+                
+    <tr>
+        <td colspan="3">&nbsp;</td>
+    </tr>
+    <tr>
+        <td colspan="3" style="border-top:1px solid #cccccc;">&nbsp;</td>
+    </tr>
+</tbody></table>
+
+<table width="100%" bgcolor="white" cellspacing="4" cellpadding="0">
+    <tbody><tr>
+        <td style="width: 10%;">
+                    
+                        <input type="button" value="Add to My Program" class="AddSession" id="218747" name="218747">
+                        <br>
+                    
+                        <a href="https://www.amstat.org/EventDetail?Eventkey=JSM2019" target="_blank" class=""><img src="./jsm2019-pd_files/register_btn.gif" alt="Register"></a>
+                
+            <a href="https://ww2.amstat.org/meetings/jsm/2019/onlineprogram/ActivityDetails.cfm?SessionID=218747" title="218747" class="">
+            CE_35T 
+            </a>
+        </td>
+        <td>
+            <b> Wed, 7/31/2019,
+                10:00 AM -
+                11:45 AM </b>
+        </td>
+        <td>
+            
+            <b>CC-406</b>
+        </td>
+    </tr>
+    <tr>
+        <td colspan="3">
+            <b>Bayesian Multilevel Modeling Using Stata (ADDED FEE) — Professional Development Computer Technology Workshop</b>
+        </td>
+    </tr>
+    <tr>
+        <td colspan="3">
+            <b>ASA</b>, Stata 
+        </td>
+    </tr>
+    
+    <tr>
+        <td colspan="3">
+            <em>Instructor(s): Yulia  Marchenko, Stata</em>
+        </td>
+    </tr>
+    
+            <tr>
+                <td colspan="3">
+                    This workshop will cover Bayesian multilevel modeling and how to fit such models using Stata. In multilevel or hierarchical data, which include longitudinal and repeated-measures data, observations belong to different groups. Groups may represent different levels of hierarchy such as hospitals, doctors nested within hospitals, and patients nested within doctors nested within hospitals. Multilevel models incorporate group-specific effects in the regression model and assume that they vary randomly across groups according to some a priori distribution, commonly a normal distribution. This assumption makes multilevel models natural candidates for Bayesian analysis. Bayesian multilevel models additionally assume that other model parameters such as regression coefficients and variance components--variances of group-specific effects--are also random. This workshop will provide a brief overview of Bayesian analysis and of classical multilevel models and will concentrate on multilevel modeling from the Bayesian perspective. It will demonstrate the use of Bayesian multilevel models in various applications and how to fit them using Stata. Basic familiarity with Bayesian analysis and classical multilevel models and how to use them in Stata will prove useful.
+                </td>
+            </tr>
+        
+                    <tr>
+                        <td valign="top" align="right">
+
+                            10:00 AM 
+                        </td>
+                        <td colspan="2">
+                            <a href="https://ww2.amstat.org/meetings/jsm/2019/onlineprogram/AbstractDetails.cfm?abstractid=308061" class="">Bayesian Multilevel Modeling Using Stata (ADDED FEE)</a>
+                            
+                            <br>
+
+                            <b>Yulia  Marchenko, Stata</b> 
+
+
+
+                        </td>
+                    </tr>
+                
+    <tr>
+        <td colspan="3">&nbsp;</td>
+    </tr>
+    <tr>
+        <td colspan="3" style="border-top:1px solid #cccccc;">&nbsp;</td>
+    </tr>
+</tbody></table>
+
+<table width="100%" bgcolor="white" cellspacing="4" cellpadding="0">
+    <tbody><tr>
+        <td style="width: 10%;">
+                    
+                        <input type="button" value="Add to My Program" class="AddSession" id="218748" name="218748">
+                        <br>
+                    
+                        <a href="https://www.amstat.org/EventDetail?Eventkey=JSM2019" target="_blank" class=""><img src="./jsm2019-pd_files/register_btn.gif" alt="Register"></a>
+                
+            <a href="https://ww2.amstat.org/meetings/jsm/2019/onlineprogram/ActivityDetails.cfm?SessionID=218748" title="218748" class="">
+            CE_36T 
+            </a>
+        </td>
+        <td>
+            <b> Wed, 7/31/2019,
+                10:00 AM -
+                11:45 AM </b>
+        </td>
+        <td>
+            
+            <b>CC-407</b>
+        </td>
+    </tr>
+    <tr>
+        <td colspan="3">
+            <b>Introduction to Deep Learning with IBM Watson Studio (ADDED FEE) — Professional Development Computer Technology Workshop</b>
+        </td>
+    </tr>
+    <tr>
+        <td colspan="3">
+            <b>ASA</b>, IBM 
+        </td>
+    </tr>
+    
+    <tr>
+        <td colspan="3">
+            <em>Instructor(s): Svetlana  Levitan, IBM; David  Nichols, IBM</em>
+        </td>
+    </tr>
+    
+            <tr>
+                <td colspan="3">
+                    Recent advances in computer hardware and algorithms have enabled proliferation of the use of deep learning models in many practical applications. Popular open source frameworks for deep learning include Keras, TensorFlow, Caffe and PyTorch. IBM Watson Studio provides several ways to build deep learning models using those frameworks, from Python Jupyter notebooks and RStudio to the graphical interface of the Neural Network Modeler. The latter allows graphical construction of deep learning models with automatic Python code creation. This workshop will first provide an introduction to the theory of traditional neural networks, then discuss convolutional and recurrent networks and their applications. Deep learning examples using the Keras library will be shown in Jupyter notebooks, RStudio, and the Neural network modeler. Attendees can get some hands-on experience with those tools. Model deployment strategies and the model interchange format ONNX will be discussed. Finally, we will examine open source packages AIFairness360 and Adversarial Robustness Toolkit developed in collaboration with IBM Research. Participants should be familiar with fundamentals of statistical modeling, and will gain a basic understanding of some popular deep learning methods including possible applications and available tools.
+                </td>
+            </tr>
+        
+                    <tr>
+                        <td valign="top" align="right">
+
+                            10:00 AM 
+                        </td>
+                        <td colspan="2">
+                            <a href="https://ww2.amstat.org/meetings/jsm/2019/onlineprogram/AbstractDetails.cfm?abstractid=308062" class="">Introduction to Deep Learning with IBM Watson Studio (ADDED FEE)</a>
+                            
+                            <br>
+
+                            <b>David  Nichols, IBM</b>; <b>Svetlana  Levitan, IBM</b> 
+
+
+
+                        </td>
+                    </tr>
+                
+    <tr>
+        <td colspan="3">&nbsp;</td>
+    </tr>
+    <tr>
+        <td colspan="3" style="border-top:1px solid #cccccc;">&nbsp;</td>
+    </tr>
+</tbody></table>
+
+<table width="100%" bgcolor="white" cellspacing="4" cellpadding="0">
+    <tbody><tr>
+        <td style="width: 10%;">
+                    
+                        <input type="button" value="Add to My Program" class="AddSession" id="218749" name="218749">
+                        <br>
+                    
+                        <a href="https://www.amstat.org/EventDetail?Eventkey=JSM2019" target="_blank" class=""><img src="./jsm2019-pd_files/register_btn.gif" alt="Register"></a>
+                
+            <a href="https://ww2.amstat.org/meetings/jsm/2019/onlineprogram/ActivityDetails.cfm?SessionID=218749" title="218749" class="">
+            CE_37T 
+            </a>
+        </td>
+        <td>
+            <b> Wed, 7/31/2019,
+                1:00 PM -
+                2:45 PM </b>
+        </td>
+        <td>
+            
+            <b>CC-405</b>
+        </td>
+    </tr>
+    <tr>
+        <td colspan="3">
+            <b>Multivariate Analysis, Saddle Point Approximation and Other New Exact Tests (ADDED FEE) — Professional Development Computer Technology Workshop</b>
+        </td>
+    </tr>
+    <tr>
+        <td colspan="3">
+            <b>ASA</b>, Cytel Inc. 
+        </td>
+    </tr>
+    
+    <tr>
+        <td colspan="3">
+            <em>Instructor(s): Ashwini  Joshi, Cytel</em>
+        </td>
+    </tr>
+    
+            <tr>
+                <td colspan="3">
+                    Stratified binomials are traditionally analyzed using odds ratio. The Barnard’s Test, an exact unconditional test is considered more powerful than exact conditional test. StatXact provides unconditional tests of CI on Difference of Proportions and CI on Ratio of Proportions for stratified data using the combined confidence distribution method. Scientific research data often presents more than one endpoint of interest. Typically, the primary family of endpoints defines the overall outcome of the experiment. The secondary families of endpoints play a supportive role and provide additional information. Gatekeeping procedures address multiplicity problems by explicitly taking into account the hierarchical structure of the multiple objectives.  StatXact provides an exact method to analyze multiple endpoint data arising from two samples with small or sparse data. StatXact also presents a non-parametric combination method for single family data. In Logistic regression, Exact methods provide conditional inference.  When Exact method becomes infeasible; Saddle Point approximation using profile likelihood is another candidate for conditional inference. It is less complex and gives inference close to exact conditional inference. It will be discussed using LogXact software.
+                </td>
+            </tr>
+        
+                    <tr>
+                        <td valign="top" align="right">
+
+                            1:00 PM 
+                        </td>
+                        <td colspan="2">
+                            <a href="https://ww2.amstat.org/meetings/jsm/2019/onlineprogram/AbstractDetails.cfm?abstractid=308063" class="">Multivariate Analysis, Saddle Point Approximation and Other New Exact Tests (ADDED FEE)</a>
+                            
+                            <br>
+
+                            <b>Ashwini  Joshi, Cytel</b> 
+
+
+
+                        </td>
+                    </tr>
+                
+    <tr>
+        <td colspan="3">&nbsp;</td>
+    </tr>
+    <tr>
+        <td colspan="3" style="border-top:1px solid #cccccc;">&nbsp;</td>
+    </tr>
+</tbody></table>
+
+<table width="100%" bgcolor="white" cellspacing="4" cellpadding="0">
+    <tbody><tr>
+        <td style="width: 10%;">
+                    
+                        <input type="button" value="Add to My Program" class="AddSession" id="218750" name="218750">
+                        <br>
+                    
+                        <a href="https://www.amstat.org/EventDetail?Eventkey=JSM2019" target="_blank" class=""><img src="./jsm2019-pd_files/register_btn.gif" alt="Register"></a>
+                
+            <a href="https://ww2.amstat.org/meetings/jsm/2019/onlineprogram/ActivityDetails.cfm?SessionID=218750" title="218750" class="">
+            CE_38T 
+            </a>
+        </td>
+        <td>
+            <b> Wed, 7/31/2019,
+                1:00 PM -
+                2:45 PM </b>
+        </td>
+        <td>
+            
+            <b>CC-403/404</b>
+        </td>
+    </tr>
+    <tr>
+        <td colspan="3">
+            <b>Analysis of Restricted Mean Survival Time Using SAS/STAT® (ADDED FEE) — Professional Development Computer Technology Workshop</b>
+        </td>
+    </tr>
+    <tr>
+        <td colspan="3">
+            <b>ASA</b>, SAS 
+        </td>
+    </tr>
+    
+    <tr>
+        <td colspan="3">
+            <em>Instructor(s): Changbin  Guo, SAS</em>
+        </td>
+    </tr>
+    
+            <tr>
+                <td colspan="3">
+                    Survival analysis handles time-to-event data. Classical methods, such as the log-rank test and the Cox proportional hazards model, focus on the hazard function and are most suitable when the proportional hazards assumption holds. When it does not hold, restricted mean survival time (RMST) methods often apply. The RMST is the expected survival time subject to a specific time horizon and is an alternative measure to summarize the survival profile. RMST-based inference has attracted attention from practitioners for its ability to deal with nonproportional hazards. SAS/STAT® software now includes methods for analyzing the RMST: you can use the new RMSTREG procedure to directly model the relationship between the RMST and covariates, and you can use the RMST option in the LIFETEST procedure to estimate the RMST and make comparisons between groups. This tutorial demonstrates these methods through examples. It also presents the rationale behind the RMST-based approach and compares it with the classical methods. A basic understanding of survival data analysis is assumed.
+                </td>
+            </tr>
+        
+                    <tr>
+                        <td valign="top" align="right">
+
+                            1:00 PM 
+                        </td>
+                        <td colspan="2">
+                            <a href="https://ww2.amstat.org/meetings/jsm/2019/onlineprogram/AbstractDetails.cfm?abstractid=308064" class="">Analysis of Restricted Mean Survival Time Using SAS/STAT® (ADDED FEE)</a>
+                            
+                            <br>
+
+                            <b>Changbin  Guo, SAS</b> 
+
+
+
+                        </td>
+                    </tr>
+                
+    <tr>
+        <td colspan="3">&nbsp;</td>
+    </tr>
+    <tr>
+        <td colspan="3" style="border-top:1px solid #cccccc;">&nbsp;</td>
+    </tr>
+</tbody></table>
+
+<table width="100%" bgcolor="white" cellspacing="4" cellpadding="0">
+    <tbody><tr>
+        <td style="width: 10%;">
+                    
+                        <input type="button" value="Add to My Program" class="AddSession" id="218751" name="218751">
+                        <br>
+                    
+                        <a href="https://www.amstat.org/EventDetail?Eventkey=JSM2019" target="_blank" class=""><img src="./jsm2019-pd_files/register_btn.gif" alt="Register"></a>
+                
+            <a href="https://ww2.amstat.org/meetings/jsm/2019/onlineprogram/ActivityDetails.cfm?SessionID=218751" title="218751" class="">
+            CE_39T 
+            </a>
+        </td>
+        <td>
+            <b> Wed, 7/31/2019,
+                1:00 PM -
+                2:45 PM </b>
+        </td>
+        <td>
+            
+            <b>CC-406</b>
+        </td>
+    </tr>
+    <tr>
+        <td colspan="3">
+            <b>Survey Data Analysis with Stata (ADDED FEE) — Professional Development Computer Technology Workshop</b>
+        </td>
+    </tr>
+    <tr>
+        <td colspan="3">
+            <b>ASA</b>, Stata 
+        </td>
+    </tr>
+    
+    <tr>
+        <td colspan="3">
+            <em>Instructor(s): Bill  Rising, StataCorp LLC</em>
+        </td>
+    </tr>
+    
+            <tr>
+                <td colspan="3">
+                    This workshop will cover using Stata for survey data analysis, i.e. data arising from designed samples from a fixed population. We will briefly introduce the sampling methods used to collect survey data, demonstrate how to tell Stata about these methods, and discuss how they affect common estimators, such as totals, ratios, and regression coeffcients. We will then show how variance estimates incorporating the sampling design can be computed simply by using the svy prefix command. Finally, we will talk about poststratification, calibration, subpopulation estimation, and visualizing models in some detail, including how to work with certainty sampling units and strata with a single sampling unit. Each topic will be illustrated with an example in a Stata session. Knowledge of Stata is not required, but basic statistical knowledge, such as topics covered in an introductory statistics course, is assumed.
+                </td>
+            </tr>
+        
+                    <tr>
+                        <td valign="top" align="right">
+
+                            1:00 PM 
+                        </td>
+                        <td colspan="2">
+                            <a href="https://ww2.amstat.org/meetings/jsm/2019/onlineprogram/AbstractDetails.cfm?abstractid=308065" class="">Survey Data Analysis with Stata (ADDED FEE)</a>
+                            
+                            <br>
+
+                            <b>Bill  Rising, StataCorp LLC</b> 
+
+
+
+                        </td>
+                    </tr>
+                
+    <tr>
+        <td colspan="3">&nbsp;</td>
+    </tr>
+    <tr>
+        <td colspan="3" style="border-top:1px solid #cccccc;">&nbsp;</td>
+    </tr>
+</tbody></table>
+
+<table width="100%" bgcolor="white" cellspacing="4" cellpadding="0">
+    <tbody><tr>
+        <td style="width: 10%;">
+                    
+                        <input type="button" value="Add to My Program" class="AddSession" id="218752" name="218752">
+                        <br>
+                    
+                        <a href="https://www.amstat.org/EventDetail?Eventkey=JSM2019" target="_blank" class=""><img src="./jsm2019-pd_files/register_btn.gif" alt="Register"></a>
+                
+            <a href="https://ww2.amstat.org/meetings/jsm/2019/onlineprogram/ActivityDetails.cfm?SessionID=218752" title="218752" class="">
+            CE_40T 
+            </a>
+        </td>
+        <td>
+            <b> Wed, 7/31/2019,
+                1:00 PM -
+                2:45 PM </b>
+        </td>
+        <td>
+            
+            <b>CC-407</b>
+        </td>
+    </tr>
+    <tr>
+        <td colspan="3">
+            <b>Teaching and Exploring Analyzes of Non-IID And/Or Non-Normally-Distributed Data with IBM SPSS Statistics (ADDED FEE) — Professional Development Computer Technology Workshop</b>
+        </td>
+    </tr>
+    <tr>
+        <td colspan="3">
+            <b>ASA</b>, IBM 
+        </td>
+    </tr>
+    
+    <tr>
+        <td colspan="3">
+            <em>Instructor(s): Vladimir  Shklover, IBM; Yingda  Jiang, IBM</em>
+        </td>
+    </tr>
+    
+            <tr>
+                <td colspan="3">
+                    Most data in practical applications of statistics and machine learning are not independently and identically distributed (IID) according to normal distributions, as many basic linear models assume. This workshop aims to present theory and share hands-on experiences with IBM SPSS Statistics to perform appropriate statistical analyses on data with errors that exhibit unequal variances, correlations and/or non-normal distributions. We will handle these data using several approaches, including Bayesian analyses, regression algorithms and mixed models. The Bayesian features in SPSS Statistics include various models for binomial, Poisson and multinomial data. In some scenarios, the desired posterior distributions are simulated by Monte Carlo methods. In regression algorithms, we are modeling data, possibly correlated, with various distributions and estimation methods. Mixed models include various target distributions and link functions, random effects and repeated measures, and various types of covariance structures, including spatial and Kronecker product structures. Tips for teaching the approaches to students will be provided. Some familiarity with statistics is expected. The attendees will get better understanding of several statistical techniques for non-IID and/or non-normally distributed data and learn how to apply and teach the techniques using IBM SPSS Statistics.
+                </td>
+            </tr>
+        
+                    <tr>
+                        <td valign="top" align="right">
+
+                            1:00 PM 
+                        </td>
+                        <td colspan="2">
+                            <a href="https://ww2.amstat.org/meetings/jsm/2019/onlineprogram/AbstractDetails.cfm?abstractid=308066" class="">Teaching and Exploring Analyzes of Non-IID And/Or Non-Normally-Distributed Data with IBM SPSS Statistics (ADDED FEE)</a>
+                            
+                            <br>
+
+                            <b>Vladimir  Shklover, IBM</b>; <b>Yingda  Jiang, IBM</b> 
+
+
+
+                        </td>
+                    </tr>
+                
+    <tr>
+        <td colspan="3">&nbsp;</td>
+    </tr>
+    <tr>
+        <td colspan="3" style="border-top:1px solid #cccccc;">&nbsp;</td>
+    </tr>
+</tbody></table>
+
+<table width="100%" bgcolor="white" cellspacing="4" cellpadding="0">
+    <tbody><tr>
+        <td style="width: 10%;">
+                    
+                        <input type="button" value="Add to My Program" class="AddSession" id="218753" name="218753">
+                        <br>
+                    
+                        <a href="https://www.amstat.org/EventDetail?Eventkey=JSM2019" target="_blank" class=""><img src="./jsm2019-pd_files/register_btn.gif" alt="Register"></a>
+                
+            <a href="https://ww2.amstat.org/meetings/jsm/2019/onlineprogram/ActivityDetails.cfm?SessionID=218753" title="218753" class="">
+            CE_41T 
+            </a>
+        </td>
+        <td>
+            <b> Wed, 7/31/2019,
+                3:00 PM -
+                4:45 PM </b>
+        </td>
+        <td>
+            
+            <b>CC-403/404</b>
+        </td>
+    </tr>
+    <tr>
+        <td colspan="3">
+            <b>Geospatial Analysis Using SAS® Software (ADDED FEE) — Professional Development Computer Technology Workshop</b>
+        </td>
+    </tr>
+    <tr>
+        <td colspan="3">
+            <b>ASA</b>, SAS 
+        </td>
+    </tr>
+    
+    <tr>
+        <td colspan="3">
+            <em>Instructor(s): Pradeep  Mohan, SAS Institute Inc.</em>
+        </td>
+    </tr>
+    
+            <tr>
+                <td colspan="3">
+                    Geospatial phenomena such as forest fires, spread of disease, crime hot spots, earthquakes, and environmental pollution are usually observed by equipment such as satellites or by individual agencies such as the US Census, US Geological Service, and other agencies. The goal of geospatial process modeling is to fit a statistical model for the geospatial phenomenon of interest to observational data that are recorded either at a fixed set of geographical entities (such as sensor locations or census tracts) or at a random collection of observed events (such as earthquake locations, tree locations, and so on). In either of these geospatial process modeling situations, you often make many modeling decisions that can involve several assumptions. This workshop will show you how to use SAS® procedures for geospatial analysis to perform geospatial process modeling. It will also discuss facilities such as diagnostics and tests that enable you to make informed modeling decisions. This course is intended for a broad audience who are interested in geospatial analysis. Familiarity with geospatial data and experience with SAS procedures are recommended but not necessary.
+                </td>
+            </tr>
+        
+                    <tr>
+                        <td valign="top" align="right">
+
+                            3:00 PM 
+                        </td>
+                        <td colspan="2">
+                            <a href="https://ww2.amstat.org/meetings/jsm/2019/onlineprogram/AbstractDetails.cfm?abstractid=308067" class="">Geospatial Analysis Using SAS® Software (ADDED FEE)</a>
+                            
+                            <br>
+
+                            <b>Pradeep  Mohan, SAS Institute Inc.</b> 
+
+
+
+                        </td>
+                    </tr>
+                
+    <tr>
+        <td colspan="3">&nbsp;</td>
+    </tr>
+    <tr>
+        <td colspan="3" style="border-top:1px solid #cccccc;">&nbsp;</td>
+    </tr>
+</tbody></table>
+
+
+
+<script type="text/javascript">
+jQuery.urlShortener.settings.apiKey = 'AIzaSyAnFlyIh8L8CUvJAZ8u7DU9DqScBNnMKTs';
+$(window).bind("load", function() {
+    var longUrlLink = $("#longUrl").val();
+    jQuery.urlShortener({
+        longUrl: longUrlLink,
+        success: function (shortUrl) {
+            $("#shortUrlInfo").html(shortUrl);
+            $('#DirectLink').prop('href',shortUrl);
+        },
+        error: function(err)
+        {
+            $("#shortUrlInfo").html(JSON.stringify(err));
+        }
+    });
+
+});
+
+        </script>
+
+
+</td>
+</tr>
+
+
+<tr>
+	<td align="right">&nbsp; </td>
+</tr>
+</tbody></table>
+
+</div>
+</div>
+</div>
+</div>
+</div>
+<a id="top" href="https://ww2.amstat.org/meetings/jsm/2019/onlineprogram/MainSearchResults.cfm#pagetop" class="show">↑</a>
+<div class="footer-wrapper">
+	<div class="container footer">
+		<div class="row">
+			<div class="col-xs-12 col-sm-8 col-md-8">
+				<a style="text-decoration:none;" href="https://www.amstat.org/" class=""><h4>American Statistical Association</h4></a>
+				<p>
+					732 North Washington Street<br>
+					Alexandria, VA 22314<br>
+					(703) 684-1221<br>
+					<a href="mailto:meetings@amstat.org" class="">meetings@amstat.org</a>
+				</p>
+			</div>
+			<div class="col-xs-12 col-sm-4 col-md-4">
+				
+			</div>
+		</div>
+	</div>
+</div>
+<div class="footer-wrapper">
+	<div id="footerbot">
+		<div class="container">
+			<div class="row">
+				<div class="col-xs-12 col-sm-12 col-md-8 subfooter">
+					<p>
+						<a href="https://www.amstat.org/ASA/Copyright.aspx" class="">Copyright</a> © American Statistical Association
+					</p>
+				</div>
+				<div class="col-xs-12 col-sm-12 col-md-4 subfooter">
+					<p>
+						<a href="https://www.amstat.org/ASA/Privacy-Statement.aspx" class="footlink">Privacy Policy</a> | <a href="https://www.amstat.org/ASA/Meetings/Meeting-Conduct-Policy.aspx" class="footlink">Conduct Policy</a> | <a href="https://www.amstat.org/ASA/Meetings/Joint-Statistical-Meetings.aspx" class="footlink">Previous JSMs</a>
+					</p>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<script>
+
+
+	if ($('#top').length) {
+		var scrollTrigger = 100,// px
+			backToTop = function () {
+				var scrollTop = $(window).scrollTop();
+				if (scrollTop > scrollTrigger) {
+					$('#top').addClass('show');
+				} else {
+					$('#top').removeClass('show');
+				}
+			};
+		backToTop();
+		$(window).on('scroll', function () {
+			backToTop();
+		});
+		$('#top').on('click', function (e) {
+			e.preventDefault();
+			$('html,body').animate({
+				scrollTop: 0
+			}, 200);
+		});
+	}
+</script>
+
+
+<script>
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+		(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+		m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+							})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+	ga('create', 'UA-667618-1', 'auto');
+	ga('send', 'pageview');
+
+</script>
+
+<script>
+//-------------------------------------------------------
+var z_account = "2819122F-0F62-4AA2-8DB4-5E4DCB21A46E";
+var z_collector = "ASASSOC.informz.net";
+var z_cookieDomain = ".amstat.org";
+//-------------------------------------------------------
+(function (e, o, n, r, t, a, s) { e[t] || (e.GlobalSnowplowNamespace = e.GlobalSnowplowNamespace || [], e.GlobalSnowplowNamespace.push(t), e[t] = function () { (e[t].q = e[t].q || []).push(arguments) }, e[t].q = e[t].q || [], a = o.createElement(n), s = o.getElementsByTagName(n)[0], a.async = 1, a.src = r, s.parentNode.insertBefore(a, s)) }(window, document, "script", "https://"+z_collector+"/web_trk/sp.js", "informz_trk")), informz_trk("newTracker", "infz", z_collector + "/web_trk/collector/", { appId: z_account, cookieDomain: z_cookieDomain }), informz_trk("setUserIdFromLocation", "_zs"), informz_trk("enableActivityTracking", 30, 15); informz_trk("trackPageView", null);
+</script>
+
+
+<iframe id="apiproxy46045bfcd3b5ba388edf56b7192e846063832f270.3867321861" name="apiproxy46045bfcd3b5ba388edf56b7192e846063832f270.3867321861" src="./jsm2019-pd_files/proxy.html" tabindex="-1" aria-hidden="true" style="width: 1px; height: 1px; position: absolute; top: -100px; display: none;"></iframe><img src="./jsm2019-pd_files/__utm.gif"></body></html>
