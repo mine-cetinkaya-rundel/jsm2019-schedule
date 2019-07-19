@@ -101,6 +101,15 @@ ui <- navbarPage(
                
                br(),
                
+               # Filter by session title ----------------------------------------------
+               textInput(
+                 "session_keyword_text",
+                 "Keywords in session title (separate multiple by commas)"
+               ),
+               
+               br(),
+               
+               
                # Excluded fee events --------------------------------
                checkboxInput("exclude_fee",
                              "Exclude added fee events"),
@@ -196,6 +205,24 @@ server <- function(input, output) {
       jsm_sessions <- jsm_sessions %>% filter(has_fee == FALSE)
     }
     
+    # Add session title filter
+    keywords <- input$session_keyword_text %>%
+      str_split(",") %>%
+      purrr::pluck(1) %>%
+      str_trim() %>%
+      discard( ~ .x == "")
+    
+    keyword_regex <- keywords
+    
+    if (length(keyword_regex) == 0) {
+      keyword_regex = ""
+    }
+    
+    matching_titles <- keyword_regex %>%
+      tolower() %>%
+      map(str_detect, string = tolower(jsm_sessions$session)) %>%
+      reduce(`&`)
+    
     # Filter and tabulate data --------------------------------------
     jsm_sessions %>%
       filter(
@@ -203,7 +230,8 @@ server <- function(input, output) {
         type %in% session_type,
         beg_time_round >= input$time[1],
         end_time_round <= input$time[2],
-        str_detect(sponsor, sponsor_string)
+        str_detect(sponsor, sponsor_string),
+        matching_titles
       ) %>%
       mutate(
         date_time = glue("{day}, {date}<br/>{time}"),
