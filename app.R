@@ -93,18 +93,16 @@ ui <- navbarPage(
                # Select typess ------------------------------------
                selectInput(
                  "type",
-                 "Type of session",
+                 "Session type",
                  choices = types,
                  multiple = TRUE,
                  selectize = TRUE
                ),
                
-               br(),
-               
                # Filter by session title ----------------------------------------------
                textInput(
                  "session_keyword_text",
-                 "Keywords in session title (separate multiple by commas)"
+                 "Keywords or phrases in session title, separated by commas"
                ),
                
                br(),
@@ -135,7 +133,7 @@ ui <- navbarPage(
            sidebarLayout(
              sidebarPanel(
                # Instructions ---------------------------------------
-               h4("Search for keywords in talk/workshop titles."),
+               h4("Search for keywords or phrases in session titles."),
                br(),
                
                # Keyword selection ----------------------------------
@@ -158,7 +156,7 @@ ui <- navbarPage(
                # Other ----------------------------------------------
                textInput(
                  "keyword_text",
-                 "Add additional keywords or phrases separated by commas"
+                 "Add additional keywords or phrases, separated by commas"
                ),
                
                br(),
