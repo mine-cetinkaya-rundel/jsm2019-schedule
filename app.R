@@ -93,13 +93,20 @@ ui <- navbarPage(
                # Select typess ------------------------------------
                selectInput(
                  "type",
-                 "Type of session",
+                 "Session type",
                  choices = types,
                  multiple = TRUE,
                  selectize = TRUE
                ),
                
+               # Filter by session title ----------------------------------------------
+               textInput(
+                 "session_keyword_text",
+                 "Keywords or phrases in session title, separated by commas"
+               ),
+               
                br(),
+               
                
                # Excluded fee events --------------------------------
                checkboxInput("exclude_fee",
@@ -126,7 +133,7 @@ ui <- navbarPage(
            sidebarLayout(
              sidebarPanel(
                # Instructions ---------------------------------------
-               h4("Search for keywords in talk/workshop titles."),
+               h4("Search for keywords or phrases in session titles."),
                br(),
                
                # Keyword selection ----------------------------------
@@ -149,7 +156,7 @@ ui <- navbarPage(
                # Other ----------------------------------------------
                textInput(
                  "keyword_text",
-                 "Add additional keywords or phrases separated by commas"
+                 "Add additional keywords or phrases, separated by commas"
                ),
                
                br(),
@@ -196,6 +203,24 @@ server <- function(input, output) {
       jsm_sessions <- jsm_sessions %>% filter(has_fee == FALSE)
     }
     
+    # Add session title filter
+    keywords <- input$session_keyword_text %>%
+      str_split(",") %>%
+      purrr::pluck(1) %>%
+      str_trim() %>%
+      discard( ~ .x == "")
+    
+    keyword_regex <- keywords
+    
+    if (length(keyword_regex) == 0) {
+      keyword_regex = ""
+    }
+    
+    matching_titles <- keyword_regex %>%
+      tolower() %>%
+      map(str_detect, string = tolower(jsm_sessions$session)) %>%
+      reduce(`&`)
+    
     # Filter and tabulate data --------------------------------------
     jsm_sessions %>%
       filter(
@@ -203,7 +228,8 @@ server <- function(input, output) {
         type %in% session_type,
         beg_time_round >= input$time[1],
         end_time_round <= input$time[2],
-        str_detect(sponsor, sponsor_string)
+        str_detect(sponsor, sponsor_string),
+        matching_titles
       ) %>%
       mutate(
         date_time = glue("{day}, {date}<br/>{time}"),
